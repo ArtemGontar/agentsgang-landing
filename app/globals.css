@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-bg-primary text-text-primary font-inter;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-4 bg-gradient-cta text-white font-semibold rounded-xl shadow-button transition-all duration-200 hover:shadow-button-hover hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply px-8 py-4 border-2 border-primary-blue text-primary-blue font-semibold rounded-xl transition-all duration-200 hover:bg-primary-blue hover:text-white;
+  }
+  
+  .card {
+    @apply bg-gradient-card border border-gray-200 rounded-xl shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 hover:border-primary-blue/20;
+  }
+  
+  .section-spacing {
+    @apply py-20 md:py-24 lg:py-32;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-hero bg-clip-text text-transparent;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Mobile typography adjustments */
+@media (max-width: 768px) {
+  .text-hero {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  
+  .text-section {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  
+  .text-subsection {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}

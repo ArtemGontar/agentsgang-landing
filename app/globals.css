@@ -5,11 +5,11 @@
 
 @layer base {
   * {
-    @apply border-gray-200;
+    @apply border-gray-200 dark:border-gray-700;
   }
   
   body {
-    @apply bg-bg-primary text-text-primary font-inter;
+    @apply bg-bg-primary dark:bg-bg-dark text-text-primary dark:text-white font-inter transition-colors duration-300;
   }
   
   html {

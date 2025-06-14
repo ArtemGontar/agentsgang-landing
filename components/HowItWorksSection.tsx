@@ -29,14 +29,14 @@ export default function HowItWorksSection() {
   ]
 
   return (
-    <section id="how-it-works" className="section-spacing bg-bg-secondary">
+    <section id="how-it-works" className="section-spacing bg-bg-secondary dark:bg-bg-dark">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-section font-semibold text-text-primary mb-4">
+          <h2 className="text-section font-semibold text-text-primary dark:text-white mb-4">
             How It Works
           </h2>
-          <p className="text-body-large text-text-secondary max-w-3xl mx-auto">
+          <p className="text-body-large text-text-secondary dark:text-text-tertiary max-w-3xl mx-auto">
             Get your AI-powered company up and running in four simple steps. 
             No technical knowledge required — just define your goals and let your agents handle the rest.
           </p>
@@ -51,61 +51,29 @@ export default function HowItWorksSection() {
             {steps.map((step, index) => (
               <div key={index} className="relative group">
                 {/* Step Card */}
-                <div className="card p-8 text-center h-full">
+                <div className="card p-8 text-center h-full bg-white dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-xl shadow-md transition-all duration-300">
                   {/* Step Number */}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="w-8 h-8 bg-white border-4 border-gray-200 rounded-full flex items-center justify-center text-sm font-bold text-text-primary group-hover:border-primary-blue transition-colors">
+                    <div className="w-8 h-8 bg-white dark:bg-bg-dark border-4 border-gray-200 dark:border-bg-secondary rounded-full flex items-center justify-center text-sm font-bold text-text-primary dark:text-white group-hover:border-primary-blue transition-colors">
                       {index + 1}
                     </div>
                   </div>
-
-                  {/* Icon */}
-                  <div className={`w-16 h-16 ${step.color} rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}>
-                    <step.icon size={32} className="text-white" />
+                  <div className={`flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full ${step.color} text-white`}>
+                    <step.icon size={28} />
                   </div>
-
-                  {/* Content */}
-                  <h3 className="text-card-title font-semibold text-text-primary mb-4">
+                  <h4 className="text-h4 font-semibold text-text-primary dark:text-white mb-2 mt-6">
                     {step.title}
-                  </h3>
-                  <p className="text-text-secondary leading-relaxed">
+                  </h4>
+                  <p className="text-body-regular text-text-secondary dark:text-text-tertiary">
                     {step.description}
                   </p>
                 </div>
-
-                {/* Arrow - Desktop */}
+                {/* Arrow (skip for last) */}
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
-                    <ArrowRight 
-                      size={24} 
-                      className="text-gray-300 group-hover:text-primary-blue transition-colors" 
-                    />
-                  </div>
-                )}
-
-                {/* Arrow - Mobile */}
-                {index < steps.length - 1 && (
-                  <div className="lg:hidden flex justify-center mt-4">
-                    <div className="w-0.5 h-8 bg-gradient-to-b from-gray-300 to-transparent"></div>
-                  </div>
+                  <ArrowRight className="hidden lg:block absolute right-0 top-1/2 transform -translate-y-1/2 text-primary-blue dark:text-secondary-purple" size={32} />
                 )}
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <p className="text-text-secondary mb-6">
-            Ready to build your AI company? Get started in less than 2 minutes.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn-primary">
-              Start Building Now
-            </button>
-            <button className="btn-secondary">
-              View Example Company
-            </button>
           </div>
         </div>
       </div>

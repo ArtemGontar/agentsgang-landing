@@ -47,14 +47,14 @@ export default function FeaturesSection() {
   ]
 
   return (
-    <section id="features" className="section-spacing">
+    <section id="features" className="section-spacing bg-white dark:bg-bg-dark">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-section font-semibold text-text-primary mb-4">
+          <h2 className="text-section font-semibold text-text-primary dark:text-white mb-4">
             Powerful Features for AI-Driven Business
           </h2>
-          <p className="text-body-large text-text-secondary max-w-3xl mx-auto">
+          <p className="text-body-large text-text-secondary dark:text-text-tertiary max-w-3xl mx-auto">
             Everything you need to build, manage, and scale your AI-powered company. 
             From specialized agents to automated workflows, we've got you covered.
           </p>

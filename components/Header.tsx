@@ -1,12 +1,22 @@
 'use client'
 
+import WaitlistModal from './WaitlistModal'
+import ComingSoonModal from './ComingSoonModal'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Moon, Sun } from 'lucide-react'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('theme') === 'dark' ? 'dark' : 'light'
+    }
+    return 'light'
+  })
+  const [waitlistOpen, setWaitlistOpen] = useState(false)
+  const [comingSoonOpen, setComingSoonOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,11 +26,21 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
+    }
+  }, [theme])
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-sm shadow-sm' 
+          ? 'bg-white/95 dark:bg-bg-dark/95 backdrop-blur-sm shadow-sm' 
           : 'bg-transparent'
       }`}
     >
@@ -31,34 +51,51 @@ export default function Header() {
             <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">P</span>
             </div>
-            <span className="text-xl font-bold text-text-primary">ProtoHive</span>
+            <span className="text-xl font-bold text-text-primary dark:text-white">ProtoHive</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#features" className="text-text-secondary hover:text-text-primary transition-colors">
+            <Link href="#features" className="text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white transition-colors">
               Features
             </Link>
-            <Link href="#how-it-works" className="text-text-secondary hover:text-text-primary transition-colors">
+            <Link href="#how-it-works" className="text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white transition-colors">
               How it Works
             </Link>
-            <Link href="#pricing" className="text-text-secondary hover:text-text-primary transition-colors">
+            <button
+              className="text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white transition-colors"
+              onClick={() => setComingSoonOpen(true)}
+            >
               Pricing
-            </Link>
-            <Link href="#faq" className="text-text-secondary hover:text-text-primary transition-colors">
+            </button>
+            <Link href="#faq" className="text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white transition-colors">
               FAQ
             </Link>
-            <Link href="/login" className="text-text-secondary hover:text-text-primary transition-colors">
-              Sign In
-            </Link>
-            <Link href="/signup" className="btn-primary">
-              Start Free
-            </Link>
+            <button
+              className="text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white transition-colors"
+              onClick={() => setWaitlistOpen(true)}
+            >
+              Join Waitlist
+            </button>
+            <button
+              className="btn-primary"
+              onClick={() => setWaitlistOpen(true)}
+            >
+              Join Waitlist
+            </button>
+            {/* Dark mode toggle */}
+            <button
+              className="ml-4 p-2 rounded-full bg-bg-tertiary dark:bg-bg-dark hover:bg-bg-secondary dark:hover:bg-bg-secondary transition-colors"
+              aria-label="Toggle dark mode"
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            >
+              {theme === 'dark' ? <Sun size={20} className="text-yellow-400" /> : <Moon size={20} className="text-blue-600" />}
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-text-secondary hover:text-text-primary"
+            className="md:hidden p-2 text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -68,55 +105,67 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-bg-dark shadow-lg border-t border-bg-tertiary dark:border-bg-secondary">
             <div className="py-4 space-y-4">
               <Link 
                 href="#features" 
-                className="block px-4 py-2 text-text-secondary hover:text-text-primary hover:bg-bg-secondary transition-colors"
+                className="block px-4 py-2 text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white hover:bg-bg-secondary dark:hover:bg-bg-secondary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Features
               </Link>
               <Link 
                 href="#how-it-works" 
-                className="block px-4 py-2 text-text-secondary hover:text-text-primary hover:bg-bg-secondary transition-colors"
+                className="block px-4 py-2 text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white hover:bg-bg-secondary dark:hover:bg-bg-secondary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 How it Works
               </Link>
-              <Link 
-                href="#pricing" 
-                className="block px-4 py-2 text-text-secondary hover:text-text-primary hover:bg-bg-secondary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                className="block w-full text-left px-4 py-2 text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white hover:bg-bg-secondary dark:hover:bg-bg-secondary transition-colors"
+                onClick={() => { setComingSoonOpen(true); setIsMenuOpen(false) }}
               >
                 Pricing
-              </Link>
+              </button>
               <Link 
                 href="#faq" 
-                className="block px-4 py-2 text-text-secondary hover:text-text-primary hover:bg-bg-secondary transition-colors"
+                className="block px-4 py-2 text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white hover:bg-bg-secondary dark:hover:bg-bg-secondary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 FAQ
               </Link>
-              <Link 
-                href="/login" 
-                className="block px-4 py-2 text-text-secondary hover:text-text-primary hover:bg-bg-secondary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                className="block w-full text-left px-4 py-2 text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white hover:bg-bg-secondary dark:hover:bg-bg-secondary transition-colors"
+                onClick={() => { setWaitlistOpen(true); setIsMenuOpen(false) }}
               >
-                Sign In
-              </Link>
+                Join Waitlist
+              </button>
               <div className="px-4">
-                <Link 
-                  href="/signup" 
-                  className="btn-primary block text-center"
-                  onClick={() => setIsMenuOpen(false)}
+                <button 
+                  className="btn-primary block text-center w-full"
+                  onClick={() => { setWaitlistOpen(true); setIsMenuOpen(false) }}
                 >
-                  Start Free
-                </Link>
+                  Join Waitlist
+                </button>
+              </div>
+              {/* Dark mode toggle for mobile */}
+              <div className="px-4 pt-2 flex justify-end">
+                <button
+                  className="p-2 rounded-full bg-bg-tertiary dark:bg-bg-dark hover:bg-bg-secondary dark:hover:bg-bg-secondary transition-colors"
+                  aria-label="Toggle dark mode"
+                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                >
+                  {theme === 'dark' ? <Sun size={20} className="text-yellow-400" /> : <Moon size={20} className="text-blue-600" />}
+                </button>
               </div>
             </div>
           </div>
-        )}
+        )}        <WaitlistModal open={waitlistOpen} onClose={() => setWaitlistOpen(false)} />
+        <ComingSoonModal 
+          open={comingSoonOpen} 
+          onClose={() => setComingSoonOpen(false)}
+          onJoinWaitlist={() => setWaitlistOpen(true)}
+        />
       </nav>
     </header>
   )

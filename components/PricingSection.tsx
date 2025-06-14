@@ -14,7 +14,7 @@ export default function PricingSection() {
         "Basic chat interface",
         "Community support"
       ],
-      cta: "Start Free",
+      cta: "Join Waitlist",
       ctaStyle: "btn-secondary",
       popular: false
     },
@@ -31,7 +31,7 @@ export default function PricingSection() {
         "Priority support",
         "Custom agent roles"
       ],
-      cta: "Start Trial",
+      cta: "Join Waitlist",
       ctaStyle: "btn-primary",
       popular: true,
       badge: "Most Popular"
@@ -57,14 +57,14 @@ export default function PricingSection() {
   ]
 
   return (
-    <section id="pricing" className="section-spacing bg-bg-secondary">
+    <section id="pricing" className="section-spacing bg-bg-secondary dark:bg-bg-dark">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-section font-semibold text-text-primary mb-4">
+          <h2 className="text-section font-semibold text-text-primary dark:text-white mb-4">
             Simple, Transparent Pricing
           </h2>
-          <p className="text-body-large text-text-secondary max-w-3xl mx-auto mb-8">
+          <p className="text-body-large text-text-secondary dark:text-text-tertiary max-w-3xl mx-auto mb-8">
             Start building your AI company for free. Scale up as your business grows. 
             No hidden fees, no vendor lock-in.
           </p>
@@ -79,50 +79,46 @@ export default function PricingSection() {
           {plans.map((plan, index) => (
             <div 
               key={index}
-              className={`relative bg-white rounded-2xl border-2 p-8 transition-all duration-300 hover:shadow-lg ${
+              className={`relative bg-white dark:bg-bg-tertiary border-2 border-bg-tertiary dark:border-bg-secondary rounded-2xl p-10 flex flex-col items-center shadow-md transition-all duration-300 ${
                 plan.popular 
-                  ? 'border-primary-blue shadow-pricing transform md:scale-105' 
-                  : 'border-gray-200 hover:border-primary-blue/30'
+                  ? 'border-primary-blue dark:border-primary-blue shadow-lg scale-105 z-10' 
+                  : ''
               }`}
             >
               {/* Popular Badge */}
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-primary-blue text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-1">
-                    <Crown size={14} />
-                    {plan.badge}
-                  </div>
-                </div>
+                <span className="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary-blue dark:bg-secondary-purple text-white text-xs font-semibold px-4 py-1 rounded-full shadow-md">
+                  {plan.badge}
+                </span>
               )}
-
               {/* Plan Header */}
               <div className="text-center mb-8">
-                <h3 className="text-card-title font-semibold text-text-primary mb-2">
+                <h3 className="text-card-title font-semibold text-text-primary dark:text-white mb-2">
                   {plan.name}
                 </h3>
-                <div className="mb-2">
-                  <span className="text-4xl font-bold text-text-primary">{plan.price}</span>
-                  <span className="text-text-secondary">{plan.period}</span>
+                <div className="flex items-end mb-4">
+                  <span className="text-4xl font-bold text-primary-blue dark:text-secondary-purple">{plan.price}</span>
+                  <span className="text-lg text-text-secondary dark:text-text-tertiary ml-1">{plan.period}</span>
                 </div>
-                <p className="text-text-secondary">
+                <p className="text-body-regular text-text-secondary dark:text-text-tertiary mb-6 text-center">
                   {plan.description}
                 </p>
               </div>
 
               {/* Features List */}
-              <div className="mb-8">
-                <ul className="space-y-4">
+              <div className="mb-8 w-full">
+                <ul className="space-y-2">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-3">
-                      <Check size={16} className="text-accent-green mt-0.5 flex-shrink-0" />
-                      <span className="text-text-secondary">{feature}</span>
+                    <li key={featureIndex} className="flex items-center gap-2 text-text-primary dark:text-white">
+                      <Check className="text-accent-green dark:text-accent-green-light" size={18} />
+                      {feature}
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* CTA Button */}
-              <button className={`w-full ${plan.ctaStyle}`}>
+              <button className={`${plan.ctaStyle} w-full`}>
                 {plan.cta}
               </button>
 

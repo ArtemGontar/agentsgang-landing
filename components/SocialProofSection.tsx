@@ -1,4 +1,4 @@
-import { Star, Quote } from 'lucide-react'
+import { Star, Quote, Users, TrendingUp, Shield, CheckCircle } from 'lucide-react'
 
 export default function SocialProofSection() {
   const testimonials = [
@@ -7,60 +7,123 @@ export default function SocialProofSection() {
       author: "Sarah Chen",
       title: "Founder",
       company: "GrowthLab Consulting",
-      rating: 5
+      rating: 5,
+      avatar: "SC"
     },
     {
       quote: "The collaboration between agents is incredible. I assign a project and watch the developer, designer, and marketer work together automatically. It's like having a full team that never sleeps.",
       author: "Marcus Rodriguez",
       title: "CEO",
       company: "TechStart Solutions",
-      rating: 5
+      rating: 5,
+      avatar: "MR"
     },
     {
       quote: "As a solo entrepreneur, ProtoHive gave me superpowers. My AI agents handle everything from market research to content creation, allowing me to focus on strategy and client relationships.",
       author: "Emily Thompson",
       title: "Independent Consultant",
       company: "Thompson Digital",
-      rating: 5
+      rating: 5,
+      avatar: "ET"
     }
   ]
 
   const stats = [
-    { number: "2,000+", label: "AI Companies Created" },
-    { number: "50,000+", label: "Tasks Automated" },
-    { number: "99.9%", label: "Uptime" },
-    { number: "4.9/5", label: "Customer Rating" }
+    { 
+      number: "2,000+", 
+      label: "AI Companies Created",
+      icon: Users,
+      color: "text-primary-blue dark:text-secondary-purple"
+    },
+    { 
+      number: "50,000+", 
+      label: "Tasks Automated",
+      icon: TrendingUp,
+      color: "text-accent-green dark:text-accent-green-light"
+    },
+    { 
+      number: "99.9%", 
+      label: "Uptime",
+      icon: Shield,
+      color: "text-secondary-purple dark:text-primary-blue"
+    },
+    { 
+      number: "4.9/5", 
+      label: "Customer Rating",
+      icon: Star,
+      color: "text-accent-green dark:text-accent-green-light"
+    }
   ]
 
   const companyLogos = [
-    { name: "TechCorp", width: "w-24" },
-    { name: "InnovateLab", width: "w-32" },
-    { name: "FutureWorks", width: "w-28" },
-    { name: "DigitalEdge", width: "w-36" },
-    { name: "SmartSys", width: "w-24" },
-    { name: "NextGen", width: "w-30" }
+    { name: "TechCorp", width: "w-28", color: "from-blue-500 to-blue-600" },
+    { name: "InnovateLab", width: "w-32", color: "from-purple-500 to-purple-600" },
+    { name: "FutureWorks", width: "w-30", color: "from-green-500 to-green-600" },
+    { name: "DigitalEdge", width: "w-36", color: "from-indigo-500 to-indigo-600" },
+    { name: "SmartSys", width: "w-28", color: "from-pink-500 to-pink-600" },
+    { name: "NextGen", width: "w-30", color: "from-teal-500 to-teal-600" }
   ]
 
   return (
-    <section className="section-spacing bg-bg-secondary">
-      <div className="container-custom">
-        {/* Stats Section */}
+    <section className="section-spacing bg-gradient-section dark:bg-bg-dark relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 left-10 w-20 h-20 bg-primary-blue rounded-full blur-xl"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-secondary-purple rounded-full blur-xl"></div>
+      </div>
+      
+      <div className="container-custom relative">
+        {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className="text-section font-semibold text-text-primary mb-4">
-            Trusted by Growing Businesses
+          <div className="inline-flex items-center gap-2 bg-white dark:bg-bg-tertiary px-4 py-2 rounded-full border border-gray-200 dark:border-bg-secondary mb-6">
+            <CheckCircle className="text-accent-green" size={16} />
+            <span className="text-body-small font-medium text-text-secondary dark:text-text-tertiary">
+              Trusted by Growing Businesses
+            </span>
+          </div>
+          <h2 className="text-section font-semibold text-text-primary dark:text-white mb-4">
+            Join Thousands of Successful Entrepreneurs
           </h2>
-          <p className="text-body-large text-text-secondary max-w-3xl mx-auto mb-12">
-            Join thousands of entrepreneurs who are already building successful AI-powered companies with ProtoHive.
+          <p className="text-body-large text-text-secondary dark:text-text-tertiary max-w-3xl mx-auto">
+            Entrepreneurs worldwide are building AI-powered companies that scale faster, work smarter, and achieve more with ProtoHive.
           </p>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-text-primary mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-text-secondary">
-                  {stat.label}
+        </div>
+
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+          {stats.map((stat, index) => (
+            <div 
+              key={index} 
+              className="text-center group hover:scale-105 transition-transform duration-300"
+            >
+              <div className="w-16 h-16 mx-auto mb-4 bg-white dark:bg-bg-tertiary rounded-2xl shadow-lg flex items-center justify-center group-hover:shadow-xl transition-shadow duration-300">
+                <stat.icon className={`${stat.color}`} size={24} />
+              </div>
+              <div className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white mb-2">
+                {stat.number}
+              </div>
+              <div className="text-body-regular text-text-secondary dark:text-text-tertiary">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Company Logos */}
+        <div className="mb-20">
+          <p className="text-center text-body-small text-text-tertiary dark:text-text-tertiary mb-8 font-medium">
+            TRUSTED BY INNOVATIVE COMPANIES
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-6">
+            {companyLogos.map((logo, idx) => (
+              <div 
+                key={logo.name} 
+                className={`bg-white dark:bg-bg-tertiary rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 flex items-center justify-center ${logo.width} hover:scale-105`} 
+                style={{ minHeight: 64 }}
+              >
+                <div className="text-center">
+                  <div className={`w-8 h-8 bg-gradient-to-r ${logo.color} rounded-lg mx-auto mb-2`}></div>
+                  <span className="text-sm font-semibold text-text-primary dark:text-white">{logo.name}</span>
                 </div>
               </div>
             ))}
@@ -68,97 +131,58 @@ export default function SocialProofSection() {
         </div>
 
         {/* Testimonials */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-subsection font-semibold text-text-primary mb-4">
-              What Our Users Say
-            </h3>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-card relative">
-                {/* Quote Icon */}
-                <div className="absolute -top-3 left-6">
-                  <div className="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center">
-                    <Quote size={14} className="text-white" />
-                  </div>
-                </div>
-
-                {/* Rating */}
-                <div className="flex items-center gap-1 mb-4 mt-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          {testimonials.map((testimonial, idx) => (
+            <div 
+              key={idx} 
+              className="bg-white dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 flex flex-col h-full group"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <Quote className="text-primary-blue dark:text-secondary-purple group-hover:scale-110 transition-transform duration-300" size={32} />
+                <div className="flex items-center gap-1">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} size={16} className="text-yellow-400 fill-current" />
+                    <Star key={i} className="text-accent-green fill-current" size={16} />
                   ))}
                 </div>
-
-                {/* Quote */}
-                <blockquote className="text-text-secondary mb-6 leading-relaxed">
-                  "{testimonial.quote}"
-                </blockquote>
-
-                {/* Author */}
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-primary-blue to-secondary-purple rounded-full flex items-center justify-center text-white font-semibold">
-                    {testimonial.author.split(' ').map(n => n[0]).join('')}
+              </div>
+              
+              <blockquote className="text-lg text-text-primary dark:text-white mb-6 flex-1 leading-relaxed">
+                "{testimonial.quote}"
+              </blockquote>
+              
+              <div className="flex items-center gap-4 mt-auto">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary-blue to-secondary-purple flex items-center justify-center text-white font-bold text-lg shadow-md">
+                  {testimonial.avatar}
+                </div>
+                <div>
+                  <div className="font-semibold text-text-primary dark:text-white">
+                    {testimonial.author}
                   </div>
-                  <div>
-                    <div className="font-semibold text-text-primary text-sm">
-                      {testimonial.author}
-                    </div>
-                    <div className="text-text-secondary text-sm">
-                      {testimonial.title}, {testimonial.company}
-                    </div>
+                  <div className="text-body-small text-text-secondary dark:text-text-tertiary">
+                    {testimonial.title}, {testimonial.company}
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
-        {/* Company Logos */}
-        <div className="text-center">
-          <p className="text-text-secondary mb-8">
-            Trusted by startups and enterprises
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
-            {companyLogos.map((logo, index) => (
-              <div 
-                key={index} 
-                className={`${logo.width} h-8 bg-gradient-to-r from-gray-300 to-gray-400 rounded flex items-center justify-center`}
-              >
-                <span className="text-xs font-semibold text-white">
-                  {logo.name}
-                </span>
-              </div>
-            ))}
+        {/* Trust Badges */}
+        <div className="flex flex-wrap justify-center gap-6">
+          <div className="bg-white dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-xl px-6 py-4 flex items-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <Shield className="text-accent-green" size={20} />
+            <div>
+              <span className="text-accent-green font-bold">SOC 2</span>
+              <span className="text-body-small text-text-secondary dark:text-text-tertiary ml-1">Compliant</span>
+            </div>
           </div>
-        </div>
-
-        {/* Security Badges */}
-        <div className="mt-16 text-center">
-          <p className="text-text-secondary mb-6">
-            Enterprise-grade security and compliance
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-8">
-            <div className="flex items-center gap-2 bg-white rounded-lg px-4 py-2 shadow-sm">
-              <div className="w-6 h-6 bg-accent-green rounded-full flex items-center justify-center">
-                <span className="text-xs text-white font-bold">✓</span>
-              </div>
-              <span className="text-sm font-semibold text-text-primary">SOC 2 Compliant</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white rounded-lg px-4 py-2 shadow-sm">
-              <div className="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center">
-                <span className="text-xs text-white font-bold">🔒</span>
-              </div>
-              <span className="text-sm font-semibold text-text-primary">SSL Secured</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white rounded-lg px-4 py-2 shadow-sm">
-              <div className="w-6 h-6 bg-secondary-purple rounded-full flex items-center justify-center">
-                <span className="text-xs text-white font-bold">📋</span>
-              </div>
-              <span className="text-sm font-semibold text-text-primary">GDPR Ready</span>
-            </div>
+          <div className="bg-white dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-xl px-6 py-4 flex items-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <TrendingUp className="text-primary-blue dark:text-secondary-purple" size={20} />
+            <span className="text-primary-blue dark:text-secondary-purple font-bold">99.9% Uptime</span>
+          </div>
+          <div className="bg-white dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-xl px-6 py-4 flex items-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <CheckCircle className="text-accent-green" size={20} />
+            <span className="text-accent-green font-bold">Enterprise Ready</span>
           </div>
         </div>
       </div>

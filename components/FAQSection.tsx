@@ -38,16 +38,27 @@ export default function FAQSection() {
   }
 
   return (
-    <section id="faq" className="section-spacing">
+    <section id="faq" className="section-spacing bg-bg-secondary dark:bg-bg-dark">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-section font-semibold text-text-primary mb-4">
+          <h2 className="text-section font-semibold text-text-primary dark:text-white mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-body-large text-text-secondary max-w-3xl mx-auto">
+          <p className="text-body-large text-text-secondary dark:text-text-tertiary max-w-3xl mx-auto">
             Get answers to common questions about ProtoHive, AI agents, and building your virtual company.
           </p>
+        </div>
+
+        {/* Contact Sales Prompt */}
+        <div className="flex flex-col items-center mb-8">
+          <a
+            href="mailto:sales@protohive.com"
+            className="btn-primary mb-3 text-lg px-8 py-3"
+          >
+            Contact Sales
+          </a>
+          <span className="text-text-secondary dark:text-text-tertiary text-body-small">Have questions? Reach out to our team before browsing the FAQ.</span>
         </div>
 
         {/* FAQ Items */}
@@ -56,63 +67,27 @@ export default function FAQSection() {
             {faqs.map((faq, index) => (
               <div 
                 key={index}
-                className="bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md"
+                className="bg-white dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md"
               >
                 <button
-                  className="w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-primary-blue/20 transition-colors"
+                  className="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none group"
                   onClick={() => toggleFAQ(index)}
                   aria-expanded={openIndex === index}
                 >
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-text-primary pr-4">
-                      {faq.question}
-                    </h3>
-                    <div className="flex-shrink-0">
-                      {openIndex === index ? (
-                        <ChevronUp size={24} className="text-primary-blue transition-transform duration-300" />
-                      ) : (
-                        <ChevronDown size={24} className="text-text-tertiary transition-transform duration-300" />
-                      )}
-                    </div>
-                  </div>
+                  <span className="text-body-large font-semibold text-text-primary dark:text-white">
+                    {faq.question}
+                  </span>
+                  <span className="ml-4 text-primary-blue dark:text-secondary-purple transition-transform duration-300 group-aria-expanded:rotate-180">
+                    {openIndex === index ? <ChevronUp /> : <ChevronDown />}
+                  </span>
                 </button>
-                
-                <div 
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
+                <div
+                  className={`px-6 pb-5 text-text-secondary dark:text-text-tertiary text-body-regular transition-all duration-300 ${openIndex === index ? 'block' : 'hidden'}`}
                 >
-                  <div className="px-6 pb-6">
-                    <div className="pt-2 border-t border-gray-100">
-                      <p className="text-text-secondary leading-relaxed mt-4">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </div>
+                  {faq.answer}
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Additional Help */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-primary-blue/5 to-secondary-purple/5 rounded-2xl p-8">
-            <h3 className="text-card-title font-semibold text-text-primary mb-4">
-              Still have questions?
-            </h3>
-            <p className="text-text-secondary mb-6 max-w-2xl mx-auto">
-              Our team is here to help you understand how ProtoHive can transform your business. 
-              Get personalized answers and see a custom demo.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="btn-primary">
-                Contact Support
-              </a>
-              <a href="/demo" className="btn-secondary">
-                Schedule Demo
-              </a>
-            </div>
           </div>
         </div>
       </div>

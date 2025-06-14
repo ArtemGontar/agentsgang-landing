@@ -159,14 +159,12 @@ export default function PricingSection() {
               <p className="text-text-secondary text-sm">SOC 2 compliant, GDPR ready</p>
             </div>
           </div>
-        </div>
-
-        {/* FAQ Teaser */}
+        </div>        {/* FAQ Teaser */}
         <div className="mt-16 text-center">
           <p className="text-text-secondary mb-4">
             Have questions about pricing or features?
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col gap-4 justify-center items-center">
             <a href="#faq" className="btn-secondary">
               View FAQ
             </a>

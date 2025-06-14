@@ -70,14 +70,7 @@ export default function Header() {
             </button>
             <Link href="#faq" className="text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white transition-colors">
               FAQ
-            </Link>
-            <button
-              className="text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white transition-colors"
-              onClick={() => setWaitlistOpen(true)}
-            >
-              Join Waitlist
-            </button>
-            <button
+            </Link>            <button
               className="btn-primary"
               onClick={() => setWaitlistOpen(true)}
             >
@@ -133,14 +126,7 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 FAQ
-              </Link>
-              <button
-                className="block w-full text-left px-4 py-2 text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white hover:bg-bg-secondary dark:hover:bg-bg-secondary transition-colors"
-                onClick={() => { setWaitlistOpen(true); setIsMenuOpen(false) }}
-              >
-                Join Waitlist
-              </button>
-              <div className="px-4">
+              </Link>              <div className="px-4">
                 <button 
                   className="btn-primary block text-center w-full"
                   onClick={() => { setWaitlistOpen(true); setIsMenuOpen(false) }}

@@ -48,20 +48,7 @@ export default function FAQSection() {
           <p className="text-body-large text-text-secondary dark:text-text-tertiary max-w-3xl mx-auto">
             Get answers to common questions about ProtoHive, AI agents, and building your virtual company.
           </p>
-        </div>
-
-        {/* Contact Sales Prompt */}
-        <div className="flex flex-col items-center mb-8">
-          <a
-            href="mailto:sales@protohive.com"
-            className="btn-primary mb-3 text-lg px-8 py-3"
-          >
-            Contact Sales
-          </a>
-          <span className="text-text-secondary dark:text-text-tertiary text-body-small">Have questions? Reach out to our team before browsing the FAQ.</span>
-        </div>
-
-        {/* FAQ Items */}
+        </div>        {/* FAQ Items */}
         <div className="max-w-4xl mx-auto">
           <div className="space-y-4">
             {faqs.map((faq, index) => (

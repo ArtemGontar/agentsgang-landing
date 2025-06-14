@@ -35,9 +35,8 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
   }
 
   if (!open) return null
-
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -45,11 +44,11 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
       />
       
       {/* Modal */}
-      <div className="relative bg-white dark:bg-bg-dark rounded-2xl shadow-xl max-w-md w-full mx-4 p-6">
+      <div className="relative bg-white dark:bg-bg-dark rounded-2xl shadow-xl max-w-md w-full p-6 max-h-[90vh] overflow-y-auto">
         {/* Close Button */}
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 p-2 text-text-tertiary hover:text-text-primary dark:text-text-tertiary dark:hover:text-white transition-colors"
+          className="absolute top-4 right-4 p-2 text-text-tertiary hover:text-text-primary dark:text-text-tertiary dark:hover:text-white transition-colors z-10"
         >
           <X size={20} />
         </button>

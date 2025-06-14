@@ -63,9 +63,8 @@ export default function SocialProofSection() {
     { name: "SmartSys", width: "w-28", color: "from-pink-500 to-pink-600" },
     { name: "NextGen", width: "w-30", color: "from-teal-500 to-teal-600" }
   ]
-
   return (
-    <section className="section-spacing bg-gradient-section dark:bg-bg-dark relative overflow-hidden">
+    <section className="section-spacing bg-gradient-section dark:bg-gradient-section-dark relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-10 w-20 h-20 bg-primary-blue rounded-full blur-xl"></div>

@@ -7,8 +7,9 @@ import WaitlistModal from './WaitlistModal'
 
 export default function HeroSection() {
   const [waitlistOpen, setWaitlistOpen] = useState(false)
+  
   return (
-    <section className="min-h-screen flex items-center bg-gradient-radial dark:bg-bg-dark pt-20">
+    <section className="min-h-screen flex items-center bg-gradient-radial dark:bg-gradient-radial-dark dark:bg-bg-dark pt-20">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
@@ -49,13 +50,12 @@ export default function HeroSection() {
 
           {/* Right Column - Hero Illustration */}
           <div className="relative">
-            <div className="relative z-10">
-              {/* Main Illustration Container */}
-              <div className="bg-gradient-card dark:bg-bg-tertiary rounded-2xl p-8 shadow-2xl">
+            <div className="relative z-10">              {/* Main Illustration Container */}
+              <div className="bg-gradient-card dark:bg-gradient-card-dark rounded-2xl p-8 shadow-2xl">
                 {/* AI Agents Workspace Illustration */}
                 <div className="space-y-6">
                   {/* Central Dashboard */}
-                  <div className="bg-white dark:bg-bg-secondary rounded-xl p-4 shadow-sm border dark:border-bg-tertiary">
+                  <div className="bg-white dark:bg-bg-dark-secondary rounded-xl p-4 shadow-sm border dark:border-bg-dark-tertiary">
                     <div className="flex items-center gap-3 mb-3">
                       <div className="w-3 h-3 bg-accent-green rounded-full"></div>
                       <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
@@ -73,49 +73,49 @@ export default function HeroSection() {
                   {/* AI Agent Cards */}
                   <div className="grid grid-cols-2 gap-4">
                     {/* Marketing Agent */}
-                    <div className="bg-white rounded-lg p-3 shadow-sm border animate-float">
+                    <div className="bg-white dark:bg-bg-dark-secondary rounded-lg p-3 shadow-sm border dark:border-bg-dark-tertiary animate-float">
                       <div className="w-6 h-6 bg-secondary-purple rounded-full mb-2 flex items-center justify-center">
                         <span className="text-xs text-white font-bold">M</span>
                       </div>
-                      <div className="text-xs font-semibold text-text-primary">Marketing Agent</div>
-                      <div className="text-xs text-text-secondary">Analyzing campaigns...</div>
-                      <div className="w-full h-1 bg-gray-200 rounded mt-2">
+                      <div className="text-xs font-semibold text-text-primary dark:text-white">Marketing Agent</div>
+                      <div className="text-xs text-text-secondary dark:text-text-tertiary">Analyzing campaigns...</div>
+                      <div className="w-full h-1 bg-gray-200 dark:bg-bg-dark-tertiary rounded mt-2">
                         <div className="w-3/4 h-1 bg-secondary-purple rounded"></div>
                       </div>
                     </div>
 
                     {/* Developer Agent */}
-                    <div className="bg-white rounded-lg p-3 shadow-sm border animate-float animation-delay-200">
+                    <div className="bg-white dark:bg-bg-dark-secondary rounded-lg p-3 shadow-sm border dark:border-bg-dark-tertiary animate-float animation-delay-200">
                       <div className="w-6 h-6 bg-primary-blue rounded-full mb-2 flex items-center justify-center">
                         <span className="text-xs text-white font-bold">D</span>
                       </div>
-                      <div className="text-xs font-semibold text-text-primary">Developer Agent</div>
-                      <div className="text-xs text-text-secondary">Writing code...</div>
-                      <div className="w-full h-1 bg-gray-200 rounded mt-2">
+                      <div className="text-xs font-semibold text-text-primary dark:text-white">Developer Agent</div>
+                      <div className="text-xs text-text-secondary dark:text-text-tertiary">Writing code...</div>
+                      <div className="w-full h-1 bg-gray-200 dark:bg-bg-dark-tertiary rounded mt-2">
                         <div className="w-1/2 h-1 bg-primary-blue rounded"></div>
                       </div>
                     </div>
 
                     {/* Analyst Agent */}
-                    <div className="bg-white rounded-lg p-3 shadow-sm border animate-float animation-delay-400">
+                    <div className="bg-white dark:bg-bg-dark-secondary rounded-lg p-3 shadow-sm border dark:border-bg-dark-tertiary animate-float animation-delay-400">
                       <div className="w-6 h-6 bg-accent-green rounded-full mb-2 flex items-center justify-center">
                         <span className="text-xs text-white font-bold">A</span>
                       </div>
-                      <div className="text-xs font-semibold text-text-primary">Analyst Agent</div>
-                      <div className="text-xs text-text-secondary">Processing data...</div>
-                      <div className="w-full h-1 bg-gray-200 rounded mt-2">
+                      <div className="text-xs font-semibold text-text-primary dark:text-white">Analyst Agent</div>
+                      <div className="text-xs text-text-secondary dark:text-text-tertiary">Processing data...</div>
+                      <div className="w-full h-1 bg-gray-200 dark:bg-bg-dark-tertiary rounded mt-2">
                         <div className="w-5/6 h-1 bg-accent-green rounded"></div>
                       </div>
                     </div>
 
                     {/* Designer Agent */}
-                    <div className="bg-white rounded-lg p-3 shadow-sm border animate-float animation-delay-600">
+                    <div className="bg-white dark:bg-bg-dark-secondary rounded-lg p-3 shadow-sm border dark:border-bg-dark-tertiary animate-float animation-delay-600">
                       <div className="w-6 h-6 bg-orange-500 rounded-full mb-2 flex items-center justify-center">
                         <span className="text-xs text-white font-bold">UI</span>
                       </div>
-                      <div className="text-xs font-semibold text-text-primary">Designer Agent</div>
-                      <div className="text-xs text-text-secondary">Creating mockups...</div>
-                      <div className="w-full h-1 bg-gray-200 rounded mt-2">
+                      <div className="text-xs font-semibold text-text-primary dark:text-white">Designer Agent</div>
+                      <div className="text-xs text-text-secondary dark:text-text-tertiary">Creating mockups...</div>
+                      <div className="w-full h-1 bg-gray-200 dark:bg-bg-dark-tertiary rounded mt-2">
                         <div className="w-2/3 h-1 bg-orange-500 rounded"></div>
                       </div>
                     </div>
@@ -139,10 +139,9 @@ export default function HeroSection() {
                 <CheckCircle size={12} className="inline mr-1" />
                 Task Complete
               </div>
-              
-              <div className="absolute -bottom-4 -left-4 bg-white shadow-lg rounded-lg p-2 text-xs animate-float animation-delay-400">
-                <div className="font-semibold text-text-primary">Real-time Updates</div>
-                <div className="text-text-secondary">Agents collaborating...</div>
+                <div className="absolute -bottom-4 -left-4 bg-white dark:bg-bg-dark-secondary shadow-lg rounded-lg p-2 text-xs animate-float animation-delay-400 border dark:border-bg-dark-tertiary">
+                <div className="font-semibold text-text-primary dark:text-white">Real-time Updates</div>
+                <div className="text-text-secondary dark:text-text-tertiary">Agents collaborating...</div>
               </div>
             </div>
 

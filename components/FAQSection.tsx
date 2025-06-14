@@ -51,10 +51,9 @@ export default function FAQSection() {
         </div>        {/* FAQ Items */}
         <div className="max-w-4xl mx-auto">
           <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div 
+            {faqs.map((faq, index) => (              <div 
                 key={index}
-                className="bg-white dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md"
+                className="bg-white dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md"
               >
                 <button
                   className="w-full flex items-center justify-between px-6 py-5 text-left focus:outline-none group"

@@ -185,11 +185,10 @@ export default function Footer() {
                   updates.
                 </p>
               </div>
-              <div className="flex w-full md:w-auto">
-                <input
+              <div className="flex w-full md:w-auto">                <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 md:w-64 px-4 py-3 bg-gray-800 dark:bg-bg-tertiary border border-gray-600 dark:border-bg-secondary rounded-l-lg focus:outline-none focus:border-primary-blue text-white"
+                  className="flex-1 md:w-64 px-4 py-3 bg-gray-800 dark:bg-bg-dark-secondary border border-gray-600 dark:border-bg-dark-tertiary rounded-l-lg focus:outline-none focus:border-primary-blue text-white"
                 />
                 <button className="px-6 py-3 bg-primary-blue hover:bg-primary-blue-dark text-white rounded-r-lg transition-colors">
                   Subscribe

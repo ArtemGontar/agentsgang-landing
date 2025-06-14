@@ -74,8 +74,7 @@ export default function SocialProofSection() {
       
       <div className="container-custom relative">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 bg-white dark:bg-bg-tertiary px-4 py-2 rounded-full border border-gray-200 dark:border-bg-secondary mb-6">
+        <div className="text-center mb-20">          <div className="inline-flex items-center gap-2 bg-white dark:bg-bg-dark-secondary px-4 py-2 rounded-full border border-gray-200 dark:border-bg-dark-tertiary mb-6">
             <CheckCircle className="text-accent-green" size={16} />
             <span className="text-body-small font-medium text-text-secondary dark:text-text-tertiary">
               Trusted by Growing Businesses
@@ -95,8 +94,7 @@ export default function SocialProofSection() {
             <div 
               key={index} 
               className="text-center group hover:scale-105 transition-transform duration-300"
-            >
-              <div className="w-16 h-16 mx-auto mb-4 bg-white dark:bg-bg-tertiary rounded-2xl shadow-lg flex items-center justify-center group-hover:shadow-xl transition-shadow duration-300">
+            >              <div className="w-16 h-16 mx-auto mb-4 bg-white dark:bg-bg-dark-secondary rounded-2xl shadow-lg flex items-center justify-center group-hover:shadow-xl transition-shadow duration-300 border dark:border-bg-dark-tertiary">
                 <stat.icon className={`${stat.color}`} size={24} />
               </div>
               <div className="text-3xl md:text-4xl font-bold text-text-primary dark:text-white mb-2">
@@ -118,7 +116,7 @@ export default function SocialProofSection() {
             {companyLogos.map((logo, idx) => (
               <div 
                 key={logo.name} 
-                className={`bg-white dark:bg-bg-tertiary rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 flex items-center justify-center ${logo.width} hover:scale-105`} 
+                className={`bg-white dark:bg-bg-dark-secondary rounded-xl shadow-md hover:shadow-lg transition-all duration-300 p-6 flex items-center justify-center ${logo.width} hover:scale-105 border dark:border-bg-dark-tertiary`} 
                 style={{ minHeight: 64 }}
               >
                 <div className="text-center">
@@ -132,10 +130,9 @@ export default function SocialProofSection() {
 
         {/* Testimonials */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          {testimonials.map((testimonial, idx) => (
-            <div 
+          {testimonials.map((testimonial, idx) => (            <div 
               key={idx} 
-              className="bg-white dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 flex flex-col h-full group"
+              className="bg-white dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 flex flex-col h-full group"
             >
               <div className="flex items-center justify-between mb-4">
                 <Quote className="text-primary-blue dark:text-secondary-purple group-hover:scale-110 transition-transform duration-300" size={32} />
@@ -165,22 +162,20 @@ export default function SocialProofSection() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Trust Badges */}
+        </div>        {/* Trust Badges */}
         <div className="flex flex-wrap justify-center gap-6">
-          <div className="bg-white dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-xl px-6 py-4 flex items-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-300">
+          <div className="bg-white dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-xl px-6 py-4 flex items-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-300">
             <Shield className="text-accent-green" size={20} />
             <div>
               <span className="text-accent-green font-bold">SOC 2</span>
               <span className="text-body-small text-text-secondary dark:text-text-tertiary ml-1">Compliant</span>
             </div>
           </div>
-          <div className="bg-white dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-xl px-6 py-4 flex items-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-300">
+          <div className="bg-white dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-xl px-6 py-4 flex items-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-300">
             <TrendingUp className="text-primary-blue dark:text-secondary-purple" size={20} />
             <span className="text-primary-blue dark:text-secondary-purple font-bold">99.9% Uptime</span>
           </div>
-          <div className="bg-white dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-xl px-6 py-4 flex items-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-300">
+          <div className="bg-white dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-xl px-6 py-4 flex items-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-300">
             <CheckCircle className="text-accent-green" size={20} />
             <span className="text-accent-green font-bold">Enterprise Ready</span>
           </div>

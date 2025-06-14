@@ -47,7 +47,7 @@ export default function ComingSoonPage({
           </p>
 
           {/* Coming Soon Message */}
-          <div className="bg-white dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-xl p-6 mb-8">
+          <div className="bg-white dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-xl p-6 mb-8">
             <h2 className="text-xl font-semibold text-text-primary dark:text-white mb-2">
               Coming Soon
             </h2>
@@ -84,7 +84,7 @@ export default function ComingSoonPage({
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-white dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent text-text-primary dark:text-white"
+                className="flex-1 px-4 py-2 bg-white dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent text-text-primary dark:text-white"
               />
               <button className="px-6 py-2 bg-primary-blue hover:bg-primary-blue-dark text-white rounded-r-lg transition-colors">
                 Notify Me

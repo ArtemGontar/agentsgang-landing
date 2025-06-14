@@ -73,14 +73,13 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-text-primary dark:text-white mb-2">
                   Full Name *
-                </label>
-                <input
+                </label>                <input
                   type="text"
                   id="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
-                  className="w-full px-4 py-3 bg-bg-secondary dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent text-text-primary dark:text-white"
+                  className="w-full px-4 py-3 bg-bg-secondary dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent text-text-primary dark:text-white"
                   placeholder="John Doe"
                 />
               </div>
@@ -88,14 +87,13 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-text-primary dark:text-white mb-2">
                   Email Address *
-                </label>
-                <input
+                </label>                <input
                   type="email"
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="w-full px-4 py-3 bg-bg-secondary dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent text-text-primary dark:text-white"
+                  className="w-full px-4 py-3 bg-bg-secondary dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent text-text-primary dark:text-white"
                   placeholder="john@company.com"
                 />
               </div>
@@ -103,13 +101,12 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-text-primary dark:text-white mb-2">
                   Company (Optional)
-                </label>
-                <input
+                </label>                <input
                   type="text"
                   id="company"
                   value={company}
                   onChange={(e) => setCompany(e.target.value)}
-                  className="w-full px-4 py-3 bg-bg-secondary dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent text-text-primary dark:text-white"
+                  className="w-full px-4 py-3 bg-bg-secondary dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent text-text-primary dark:text-white"
                   placeholder="Your Company"
                 />
               </div>

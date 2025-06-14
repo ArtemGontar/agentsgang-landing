@@ -50,11 +50,10 @@ export default function HowItWorksSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
             {steps.map((step, index) => (
               <div key={index} className="relative group">
-                {/* Step Card */}
-                <div className="card p-8 text-center h-full bg-white dark:bg-bg-tertiary border border-gray-200 dark:border-bg-secondary rounded-xl shadow-md transition-all duration-300">
+                {/* Step Card */}                <div className="card p-8 text-center h-full bg-white dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-xl shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105">
                   {/* Step Number */}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="w-8 h-8 bg-white dark:bg-bg-dark border-4 border-gray-200 dark:border-bg-secondary rounded-full flex items-center justify-center text-sm font-bold text-text-primary dark:text-white group-hover:border-primary-blue transition-colors">
+                    <div className="w-8 h-8 bg-white dark:bg-bg-dark-secondary border-4 border-gray-200 dark:border-bg-dark-tertiary rounded-full flex items-center justify-center text-sm font-bold text-text-primary dark:text-white group-hover:border-primary-blue transition-colors">
                       {index + 1}
                     </div>
                   </div>

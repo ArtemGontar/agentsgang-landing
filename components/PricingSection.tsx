@@ -67,8 +67,7 @@ export default function PricingSection() {
           <p className="text-body-large text-text-secondary dark:text-text-tertiary max-w-3xl mx-auto mb-8">
             Start building your AI company for free. Scale up as your business grows. 
             No hidden fees, no vendor lock-in.
-          </p>
-          <div className="inline-flex items-center gap-2 text-sm text-text-secondary">
+          </p>          <div className="inline-flex items-center gap-2 text-sm text-text-secondary dark:text-text-tertiary">
             <Check size={16} className="text-accent-green" />
             <span>No credit card required for free plan</span>
           </div>
@@ -76,10 +75,9 @@ export default function PricingSection() {
 
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {plans.map((plan, index) => (
-            <div 
+          {plans.map((plan, index) => (            <div 
               key={index}
-              className={`relative bg-white dark:bg-bg-tertiary border-2 border-bg-tertiary dark:border-bg-secondary rounded-2xl p-10 flex flex-col items-center shadow-md transition-all duration-300 ${
+              className={`relative bg-white dark:bg-bg-dark-secondary border-2 border-bg-tertiary dark:border-bg-dark-tertiary rounded-2xl p-10 flex flex-col items-center shadow-md transition-all duration-300 ${
                 plan.popular 
                   ? 'border-primary-blue dark:border-primary-blue shadow-lg scale-105 z-10' 
                   : ''
@@ -123,8 +121,7 @@ export default function PricingSection() {
               </button>
 
               {/* Trial Info */}
-              {plan.name === "Professional" && (
-                <p className="text-center text-xs text-text-tertiary mt-3">
+              {plan.name === "Professional" && (                <p className="text-center text-xs text-text-tertiary dark:text-text-tertiary mt-3">
                   14-day free trial included
                 </p>
               )}
@@ -138,37 +135,36 @@ export default function PricingSection() {
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-accent-green/10 rounded-full flex items-center justify-center mb-3">
                 <Check size={24} className="text-accent-green" />
-              </div>
-              <h4 className="font-semibold text-text-primary mb-2">Money-Back Guarantee</h4>
-              <p className="text-text-secondary text-sm">30-day refund policy for paid plans</p>
+              </div>              <h4 className="font-semibold text-text-primary dark:text-white mb-2">Money-Back Guarantee</h4>
+              <p className="text-text-secondary dark:text-text-tertiary text-sm">30-day refund policy for paid plans</p>
             </div>
             
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-primary-blue/10 rounded-full flex items-center justify-center mb-3">
                 <Star size={24} className="text-primary-blue" />
               </div>
-              <h4 className="font-semibold text-text-primary mb-2">Trusted by 2,000+</h4>
-              <p className="text-text-secondary text-sm">Entrepreneurs building AI companies</p>
+              <h4 className="font-semibold text-text-primary dark:text-white mb-2">Trusted by 2,000+</h4>
+              <p className="text-text-secondary dark:text-text-tertiary text-sm">Entrepreneurs building AI companies</p>
             </div>
             
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-secondary-purple/10 rounded-full flex items-center justify-center mb-3">
                 <Crown size={24} className="text-secondary-purple" />
               </div>
-              <h4 className="font-semibold text-text-primary mb-2">Enterprise Ready</h4>
-              <p className="text-text-secondary text-sm">SOC 2 compliant, GDPR ready</p>
+              <h4 className="font-semibold text-text-primary dark:text-white mb-2">Enterprise Ready</h4>
+              <p className="text-text-secondary dark:text-text-tertiary text-sm">SOC 2 compliant, GDPR ready</p>
             </div>
           </div>
         </div>        {/* FAQ Teaser */}
         <div className="mt-16 text-center">
-          <p className="text-text-secondary mb-4">
+          <p className="text-text-secondary dark:text-text-tertiary mb-4">
             Have questions about pricing or features?
           </p>
           <div className="flex flex-col gap-4 justify-center items-center">
             <a href="#faq" className="btn-secondary">
               View FAQ
             </a>
-            <a href="/contact" className="text-primary-blue hover:text-primary-blue-dark transition-colors">
+            <a href="/contact" className="text-primary-blue dark:text-secondary-purple hover:text-primary-blue-dark dark:hover:text-secondary-purple-light transition-colors">
               Contact Sales →
             </a>
           </div>

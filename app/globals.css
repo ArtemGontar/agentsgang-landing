@@ -15,6 +15,30 @@
   html {
     scroll-behavior: smooth;
   }
+  
+  /* Improve dark mode text contrast */
+  .dark {
+    color-scheme: dark;
+  }
+  
+  /* Better dark mode scrollbars */
+  .dark ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .dark ::-webkit-scrollbar-track {
+    background: #374151;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb {
+    background: #6B7280;
+    border-radius: 4px;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: #9CA3AF;
+  }
 }
 
 @layer components {
@@ -25,9 +49,8 @@
   .btn-secondary {
     @apply px-8 py-4 border-2 border-primary-blue text-primary-blue font-semibold rounded-xl transition-all duration-200 hover:bg-primary-blue hover:text-white;
   }
-  
-  .card {
-    @apply bg-gradient-card border border-gray-200 rounded-xl shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 hover:border-primary-blue/20;
+    .card {
+    @apply bg-gradient-card dark:bg-gradient-card-dark border border-gray-200 dark:border-bg-dark-tertiary rounded-xl shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 hover:border-primary-blue/20;
   }
   
   .section-spacing {
@@ -42,6 +65,10 @@
 @layer utilities {
   .text-gradient {
     @apply bg-gradient-hero bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-dark {
+    @apply bg-gradient-hero-dark bg-clip-text text-transparent;
   }
   
   .animation-delay-200 {

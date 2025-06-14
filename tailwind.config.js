@@ -23,17 +23,24 @@ module.exports = {
           green: '#10B981',
           'green-light': '#34D399',
           'green-dark': '#059669',
-        },
-        text: {
+        },        text: {
           primary: '#1F2937',
           secondary: '#6B7280',
           tertiary: '#9CA3AF',
-        },
-        bg: {
+          // Dark mode specific text colors
+          'dark-primary': '#F9FAFB',
+          'dark-secondary': '#D1D5DB',
+          'dark-tertiary': '#9CA3AF',
+        },        bg: {
           primary: '#FFFFFF',
           secondary: '#F9FAFB',
           tertiary: '#F3F4F6',
           dark: '#111827',
+          'dark-secondary': '#1F2937',
+          'dark-tertiary': '#374151',
+          // Additional dark backgrounds for better contrast
+          'dark-card': '#242937',
+          'dark-elevated': '#2D3748',
         },
       },
       fontFamily: {
@@ -54,13 +61,16 @@ module.exports = {
         '18': '4.5rem',
         '88': '22rem',
         '120': '30rem',
-      },
-      backgroundImage: {
+      },      backgroundImage: {
         'gradient-hero': 'linear-gradient(135deg, #007AFF 0%, #7C3AED 100%)',
+        'gradient-hero-dark': 'linear-gradient(135deg, #4DA3FF 0%, #A855F7 100%)',
         'gradient-card': 'linear-gradient(145deg, #FFFFFF 0%, #F9FAFB 100%)',
+        'gradient-card-dark': 'linear-gradient(145deg, #374151 0%, #1F2937 100%)',
         'gradient-cta': 'linear-gradient(135deg, #007AFF 0%, #0051CC 100%)',
         'gradient-section': 'linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%)',
+        'gradient-section-dark': 'linear-gradient(180deg, #111827 0%, #1F2937 100%)',
         'gradient-radial': 'radial-gradient(circle at 30% 20%, rgba(124, 58, 237, 0.1) 0%, transparent 50%)',
+        'gradient-radial-dark': 'radial-gradient(circle at 30% 20%, rgba(168, 85, 247, 0.15) 0%, transparent 50%)',
       },
       boxShadow: {
         'button': '0 4px 16px rgba(0, 122, 255, 0.3)',

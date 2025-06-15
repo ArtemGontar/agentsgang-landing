@@ -129,7 +129,8 @@ export default function SocialProofSection() {
 
         {/* Testimonials */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          {testimonials.map((testimonial, idx) => (            <div 
+          {testimonials.map((testimonial, idx) => (            
+            <div 
               key={idx} 
               className="bg-white dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-2xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 flex flex-col h-full group"
             >
@@ -144,7 +145,8 @@ export default function SocialProofSection() {
               
               <blockquote className="text-lg text-text-primary dark:text-white mb-6 flex-1 leading-relaxed">
                 "{testimonial.quote}"
-              </blockquote>              <div className="flex items-center gap-4 mt-auto">
+              </blockquote>              
+              <div className="flex items-center gap-4 mt-auto">
                 <img 
                   src={`/feedback/feedback${idx + 1}.png`}
                   alt={testimonial.author}
@@ -162,7 +164,8 @@ export default function SocialProofSection() {
               </div>
             </div>
           ))}
-        </div>        {/* Trust Badges */}
+        </div>        
+        {/* Trust Badges */}
         <div className="flex flex-wrap justify-center gap-6">
           <div className="bg-white dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-xl px-6 py-4 flex items-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-300">
             <Shield className="text-accent-green" size={20} />

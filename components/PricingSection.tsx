@@ -1,6 +1,13 @@
+'use client'
+
+import { useState } from 'react'
 import { Check, Star, Crown } from 'lucide-react'
+import ComingSoonModal from './ComingSoonModal'
+import WaitlistModal from './WaitlistModal'
 
 export default function PricingSection() {
+  const [comingSoonOpen, setComingSoonOpen] = useState(false)
+  const [waitlistOpen, setWaitlistOpen] = useState(false)
   const plans = [
     {
       name: "Starter",
@@ -113,10 +120,11 @@ export default function PricingSection() {
                     </li>
                   ))}
                 </ul>
-              </div>
-
-              {/* CTA Button */}
-              <button className={`${plan.ctaStyle} w-full`}>
+              </div>              {/* CTA Button */}
+              <button 
+                className={`${plan.ctaStyle} w-full`}
+                onClick={() => setComingSoonOpen(true)}
+              >
                 {plan.cta}
               </button>
 
@@ -167,9 +175,19 @@ export default function PricingSection() {
             <a href="/contact" className="text-primary-blue dark:text-secondary-purple hover:text-primary-blue-dark dark:hover:text-secondary-purple-light transition-colors">
               Contact Sales →
             </a>
-          </div>
-        </div>
+          </div>        </div>
       </div>
+
+      {/* Modals */}
+      <ComingSoonModal 
+        open={comingSoonOpen} 
+        onClose={() => setComingSoonOpen(false)}
+        onJoinWaitlist={() => setWaitlistOpen(true)}
+      />
+      <WaitlistModal 
+        open={waitlistOpen} 
+        onClose={() => setWaitlistOpen(false)} 
+      />
     </section>
   )
 }

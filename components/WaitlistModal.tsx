@@ -31,12 +31,12 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
     setEmail('')
     setName('')
     setCompany('')
-    onClose()
-  }
+    onClose()  }
 
   if (!open) return null
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -44,7 +44,7 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
       />
       
       {/* Modal */}
-      <div className="relative bg-white dark:bg-bg-dark rounded-2xl shadow-xl max-w-md w-full p-6 max-h-[90vh] overflow-y-auto">
+      <div className="relative bg-white dark:bg-bg-dark rounded-2xl shadow-xl max-w-md w-full p-6 max-h-[90vh] overflow-y-auto transform scale-100 transition-transform duration-200">
         {/* Close Button */}
         <button
           onClick={handleClose}

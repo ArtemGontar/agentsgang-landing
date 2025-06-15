@@ -1,7 +1,6 @@
 'use client'
 
 import WaitlistModal from './WaitlistModal'
-import ComingSoonModal from './ComingSoonModal'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -12,12 +11,10 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('theme') === 'dark' ? 'dark' : 'light'
-    }
+      return localStorage.getItem('theme') === 'dark' ? 'dark' : 'light'    }
     return 'light'
   })
   const [waitlistOpen, setWaitlistOpen] = useState(false)
-  const [comingSoonOpen, setComingSoonOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,13 +62,9 @@ export default function Header() {
             </Link>
             <Link href="#how-it-works" className="text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white transition-colors">
               How it Works
-            </Link>
-            <button
-              className="text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white transition-colors"
-              onClick={() => setComingSoonOpen(true)}
-            >
+            </Link>            <Link href="#pricing" className="text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white transition-colors">
               Pricing
-            </button>
+            </Link>
             <Link href="#faq" className="text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white transition-colors">
               FAQ
             </Link>            <button
@@ -117,13 +110,13 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 How it Works
-              </Link>
-              <button
-                className="block w-full text-left px-4 py-2 text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white hover:bg-bg-secondary dark:hover:bg-bg-secondary transition-colors"
-                onClick={() => { setComingSoonOpen(true); setIsMenuOpen(false) }}
+              </Link>              <Link 
+                href="#pricing" 
+                className="block px-4 py-2 text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white hover:bg-bg-secondary dark:hover:bg-bg-secondary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
-              </button>
+              </Link>
               <Link 
                 href="#faq" 
                 className="block px-4 py-2 text-text-secondary dark:text-text-tertiary hover:text-text-primary dark:hover:text-white hover:bg-bg-secondary dark:hover:bg-bg-secondary transition-colors"
@@ -149,13 +142,9 @@ export default function Header() {
                 </button>
               </div>
             </div>
-          </div>
-        )}        <WaitlistModal open={waitlistOpen} onClose={() => setWaitlistOpen(false)} />
-        <ComingSoonModal 
-          open={comingSoonOpen} 
-          onClose={() => setComingSoonOpen(false)}
-          onJoinWaitlist={() => setWaitlistOpen(true)}
-        />
+          </div>        )}
+
+        <WaitlistModal open={waitlistOpen} onClose={() => setWaitlistOpen(false)} />
       </nav>
     </header>
   )

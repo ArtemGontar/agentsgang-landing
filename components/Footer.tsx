@@ -3,12 +3,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Twitter, Linkedin, Mail } from 'lucide-react'
-import ComingSoonModal from './ComingSoonModal'
 import WaitlistModal from './WaitlistModal'
 import { useState } from 'react'
 
 export default function Footer() {
-  const [comingSoonOpen, setComingSoonOpen] = useState(false)
   const [waitlistOpen, setWaitlistOpen] = useState(false)
 
   return (
@@ -20,14 +18,13 @@ export default function Footer() {
             {/* Product */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Product</h3>
-              <ul className="space-y-3">
-                <li>
-                  <button
-                    onClick={() => setComingSoonOpen(true)}
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors underline"
+              <ul className="space-y-3">                <li>
+                  <Link
+                    href="#pricing"
+                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
                   >
                     Pricing
-                  </button>
+                  </Link>
                 </li>
                 <li>
                   <Link
@@ -239,13 +236,9 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </div>      <ComingSoonModal
-        open={comingSoonOpen}
-        onClose={() => setComingSoonOpen(false)}
-        onJoinWaitlist={() => setWaitlistOpen(true)}
-      />
+          </div>        </div>
+      </div>
+
       <WaitlistModal
         open={waitlistOpen}
         onClose={() => setWaitlistOpen(false)}

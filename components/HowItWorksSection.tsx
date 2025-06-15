@@ -1,4 +1,4 @@
-import { Building, Users, MessageSquare, TrendingUp, ArrowRight } from 'lucide-react'
+import { Building, Users, MessageSquare, TrendingUp } from 'lucide-react'
 
 export default function HowItWorksSection() {
   const steps = [
@@ -62,15 +62,10 @@ export default function HowItWorksSection() {
                   </div>
                   <h4 className="text-h4 font-semibold text-text-primary dark:text-white mb-2 mt-6">
                     {step.title}
-                  </h4>
-                  <p className="text-body-regular text-text-secondary dark:text-text-tertiary">
+                  </h4>                  <p className="text-body-regular text-text-secondary dark:text-text-tertiary">
                     {step.description}
                   </p>
                 </div>
-                {/* Arrow (skip for last) */}
-                {index < steps.length - 1 && (
-                  <ArrowRight className="hidden lg:block absolute right-0 top-1/2 transform -translate-y-1/2 text-primary-blue dark:text-secondary-purple" size={32} />
-                )}
               </div>
             ))}
           </div>

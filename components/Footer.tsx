@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Twitter, Linkedin, Mail } from 'lucide-react'
 import ComingSoonModal from './ComingSoonModal'
 import WaitlistModal from './WaitlistModal'
@@ -201,11 +202,14 @@ export default function Footer() {
           <div className="border-t border-gray-700 dark:border-bg-secondary pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between">
               {/* Logo and Copyright */}
-              <div className="flex items-center space-x-4 mb-4 md:mb-0">
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">P</span>
-                  </div>
+              <div className="flex items-center space-x-4 mb-4 md:mb-0">                <div className="flex items-center space-x-2">
+                  <Image 
+                    src="/logo.png" 
+                    alt="ProtoHive Logo" 
+                    width={32} 
+                    height={32} 
+                    className="rounded-lg"
+                  />
                   <span className="text-xl font-bold">ProtoHive</span>
                 </div>
                 <span className="text-gray-300 dark:text-text-tertiary">

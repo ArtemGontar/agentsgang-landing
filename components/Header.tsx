@@ -4,6 +4,7 @@ import WaitlistModal from './WaitlistModal'
 import ComingSoonModal from './ComingSoonModal'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X, Moon, Sun } from 'lucide-react'
 
 export default function Header() {
@@ -45,12 +46,15 @@ export default function Header() {
       }`}
     >
       <nav className="container-custom">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-20">          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">P</span>
-            </div>
+            <Image 
+              src="/logo.png" 
+              alt="ProtoHive Logo" 
+              width={32} 
+              height={32} 
+              className="rounded-lg"
+            />
             <span className="text-xl font-bold text-text-primary dark:text-white">ProtoHive</span>
           </Link>
 

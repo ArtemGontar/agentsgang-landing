@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, Clock, Mail } from 'lucide-react'
 
 interface ComingSoonPageProps {
@@ -18,11 +19,14 @@ export default function ComingSoonPage({
     <div className="min-h-screen bg-gradient-section dark:bg-bg-dark">
       {/* Simple Header */}
       <header className="border-b border-gray-200 dark:border-bg-secondary">
-        <div className="container-custom py-4">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">P</span>
-            </div>
+        <div className="container-custom py-4">          <Link href="/" className="flex items-center space-x-2">
+            <Image 
+              src="/logo.png" 
+              alt="ProtoHive Logo" 
+              width={32} 
+              height={32} 
+              className="rounded-lg"
+            />
             <span className="text-xl font-bold text-text-primary dark:text-white">ProtoHive</span>
           </Link>
         </div>

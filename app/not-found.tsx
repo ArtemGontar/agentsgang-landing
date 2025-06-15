@@ -1,15 +1,19 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Home, ArrowRight, Search } from 'lucide-react'
 
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-gradient-section dark:bg-bg-dark flex items-center justify-center px-4">
-      <div className="max-w-lg text-center">
-        {/* Logo */}
+      <div className="max-w-lg text-center">        {/* Logo */}
         <div className="flex justify-center mb-8">
-          <div className="w-16 h-16 bg-gradient-hero rounded-2xl flex items-center justify-center">
-            <span className="text-white font-bold text-2xl">P</span>
-          </div>
+          <Image 
+            src="/logo.png" 
+            alt="ProtoHive Logo" 
+            width={64} 
+            height={64} 
+            className="rounded-2xl"
+          />
         </div>
 
         {/* Error Code */}

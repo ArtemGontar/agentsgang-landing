@@ -12,6 +12,21 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://protohive.com'),
   title: 'ProtoHive - Build Your AI-Powered Company in Minutes',
   description: 'Create specialized AI agents that work together as your virtual team — handling marketing, development, analysis, and more while you focus on strategy.',
+  icons: {
+    icon: [
+      { url: '/logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+    ],
+    other: [
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' }
+    ]
+  },
   keywords: 'AI agents, virtual team, AI automation, business AI, AI company, AI tools, artificial intelligence',
   authors: [{ name: 'ProtoHive' }],
   openGraph: {
@@ -58,13 +73,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} scroll-smooth`}>
+    <html lang="en" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning={true}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="manifest" href="/site.webmanifest" />        
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -79,7 +94,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} antialiased bg-bg-primary dark:bg-bg-dark transition-colors duration-300`}>
+      <body className={`${inter.className} antialiased bg-bg-primary dark:bg-bg-dark transition-colors duration-300`} suppressHydrationWarning={true}>
         {children}
       </body>
     </html>

@@ -144,12 +144,13 @@ export default function SocialProofSection() {
               
               <blockquote className="text-lg text-text-primary dark:text-white mb-6 flex-1 leading-relaxed">
                 "{testimonial.quote}"
-              </blockquote>
-              
-              <div className="flex items-center gap-4 mt-auto">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary-blue to-secondary-purple flex items-center justify-center text-white font-bold text-lg shadow-md">
-                  {testimonial.avatar}
-                </div>
+              </blockquote>              <div className="flex items-center gap-4 mt-auto">
+                <img 
+                  src={`/feedback/feedback${idx + 1}.png`}
+                  alt={testimonial.author}
+                  className="w-12 h-12 rounded-full object-contain shadow-md border-2 border-white dark:border-bg-dark flex-shrink-0"
+                  style={{ imageRendering: 'auto', minWidth: '48px', minHeight: '48px' }}
+                />
                 <div>
                   <div className="font-semibold text-text-primary dark:text-white">
                     {testimonial.author}

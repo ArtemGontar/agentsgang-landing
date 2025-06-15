@@ -30,17 +30,17 @@ export default function HeroSection() {
                 <Play size={20} />
                 Watch Demo
               </Link>
-            </div>
-
-            {/* Trust Indicator */}
+            </div>            {/* Trust Indicator */}
             <div className="flex items-center gap-3 text-text-secondary dark:text-text-tertiary">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <div 
-                    key={i}
-                    className="w-8 h-8 rounded-full bg-gradient-to-r from-primary-blue to-secondary-purple border-2 border-white dark:border-bg-dark flex items-center justify-center text-white text-xs font-semibold"
-                  >
-                    {i}
+                  <div key={i} className="w-8 h-8 rounded-full bg-gray-100 dark:bg-bg-dark-tertiary border-2 border-white dark:border-bg-dark overflow-hidden flex items-center justify-center">
+                    <img 
+                      src={`/user-profiles/user-profile${i}.png`}
+                      alt={`User ${i}`}
+                      className="w-full h-full object-contain"
+                      style={{ imageRendering: 'auto' }}
+                    />
                   </div>
                 ))}
               </div>

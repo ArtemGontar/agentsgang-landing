@@ -61,6 +61,10 @@ const FAQPageSchema = {
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index)
+  }
+
   return (
     <section id="faq" className="section-spacing bg-white dark:bg-bg-dark">
       <script
@@ -79,7 +83,8 @@ export default function FAQSection() {
         </div>        {/* FAQ Items */}
         <div className="max-w-4xl mx-auto">
           <div className="space-y-4">
-            {faqs.map((faq, index) => (              <div 
+            {FAQPageSchema.mainEntity.map((faq, index) => (
+              <div
                 key={index}
                 className="bg-white dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-xl overflow-hidden transition-all duration-300 hover:shadow-md"
               >
@@ -89,16 +94,18 @@ export default function FAQSection() {
                   aria-expanded={openIndex === index}
                 >
                   <span className="text-body-large font-semibold text-text-primary dark:text-white">
-                    {faq.question}
+                    {faq.name}
                   </span>
                   <span className="ml-4 text-primary-blue dark:text-secondary-purple transition-transform duration-300 group-aria-expanded:rotate-180">
                     {openIndex === index ? <ChevronUp /> : <ChevronDown />}
                   </span>
                 </button>
                 <div
-                  className={`px-6 pb-5 text-text-secondary dark:text-text-tertiary text-body-regular transition-all duration-300 ${openIndex === index ? 'block' : 'hidden'}`}
+                  className={`px-6 pb-5 text-text-secondary dark:text-text-tertiary text-body-regular transition-all duration-300 ${
+                    openIndex === index ? 'block' : 'hidden'
+                  }`}
                 >
-                  {faq.answer}
+                  {faq.acceptedAnswer.text}
                 </div>
               </div>
             ))}

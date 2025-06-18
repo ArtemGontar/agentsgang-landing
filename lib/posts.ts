@@ -4,7 +4,26 @@ import matter from 'gray-matter'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
-export function getSortedPostsData() {
+// Define post metadata types
+export interface PostMetaData {
+  title: string
+  date: string
+  excerpt: string
+  cover_image: string
+  author: string
+  author_title: string
+}
+
+export interface PostListData extends PostMetaData {
+  id: string
+}
+
+export interface PostData extends PostMetaData {
+  id: string
+  content: string
+}
+
+export function getSortedPostsData(): PostListData[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map(fileName => {
@@ -21,7 +40,7 @@ export function getSortedPostsData() {
     // Combine the data with the id
     return {
       id,
-      ...(matterResult.data as { date: string; title: string; excerpt: string })
+      ...(matterResult.data as PostMetaData)
     }
   })
   // Sort posts by date
@@ -34,7 +53,7 @@ export function getSortedPostsData() {
   })
 }
 
-export async function getPostData(id: string) {
+export async function getPostData(id: string): Promise<PostData> {
   const fullPath = path.join(postsDirectory, `${id}.mdx`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
@@ -45,6 +64,6 @@ export async function getPostData(id: string) {
   return {
     id,
     content: matterResult.content,
-    ...matterResult.data
+    ...(matterResult.data as PostMetaData)
   }
 }

@@ -1,3 +1,4 @@
+import React from 'react'
 import { getSortedPostsData } from '@/lib/posts'
 import Link from 'next/link'
 
@@ -6,19 +7,20 @@ export default function BlogPage() {
   return (
     <section className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-8">Blog</h1>
-      <ul className="space-y-8">
-        {allPostsData.map(({ id, date, title, excerpt }) => (
-          <li key={id} className="border-b pb-4">
-            <Link href={`/blog/${id}`}>
-              <h2 className="text-2xl font-semibold hover:text-blue-500">{title}</h2>
-            </Link>
-            <small className="text-gray-500">
-              <p>{date}</p>
-            </small>
-            <p className="text-gray-700 mt-2">{excerpt}</p>
-          </li>
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {allPostsData.map(({ id, title, excerpt, date, cover_image, author }) => (
+          <Link key={id} href={`/blog/${id}`} className="block border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+            <img src={cover_image} alt={title} className="w-full h-48 object-cover" />
+            <div className="p-4">
+              <h2 className="text-2xl font-semibold text-primary hover:text-primary-blue-light mb-2">{title}</h2>
+              <div className="text-sm text-secondary mb-2">
+                <span>{date}</span> &bull; <span>{author}</span>
+              </div>
+              <p className="text-gray-700 text-body mt-2">{excerpt}</p>
+            </div>
+          </Link>
         ))}
-      </ul>
+      </div>
     </section>
   )
 }

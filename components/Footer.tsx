@@ -18,37 +18,38 @@ export default function Footer() {
             {/* Product */}
             <div>
               <h3 className="text-lg font-semibold mb-4">Product</h3>
-              <ul className="space-y-3">                <li>
-                  <Link
-                    href="#pricing"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
-                  >
-                    Pricing
-                  </Link>
-                </li>
+              <ul className="space-y-3">
                 <li>
                   <Link
-                    href="#features"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
+                    href="/#features"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     Features
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/docs"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
+                    href="/#how-it-works"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
-                    Documentation
+                    How it Works
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/api"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
+                    href="/#pricing"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
-                    API
+                    Pricing
                   </Link>
+                </li>
+                <li>
+                  <button
+                    onClick={() => setWaitlistOpen(true)}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    Join Waitlist
+                  </button>
                 </li>
               </ul>
             </div>
@@ -60,23 +61,15 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/about"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     About Us
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/blog"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
-                  >
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     href="/careers"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     Careers
                   </Link>
@@ -84,7 +77,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/contact"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     Contact
                   </Link>
@@ -98,34 +91,34 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li>
                   <Link
-                    href="/help"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
+                    href="/blog"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
-                    Help Center
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/docs"
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    Docs
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/community"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     Community
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/tutorials"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
+                    href="/help"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
-                    Tutorials
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/case-studies"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
-                  >
-                    Case Studies
+                    Help Center
                   </Link>
                 </li>
               </ul>
@@ -137,24 +130,24 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li>
                   <Link
-                    href="/privacy"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
-                  >
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     href="/terms"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     Terms of Service
                   </Link>
                 </li>
                 <li>
                   <Link
+                    href="/privacy"
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/security"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     Security
                   </Link>
@@ -162,7 +155,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/gdpr"
-                    className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
                     GDPR
                   </Link>
@@ -175,20 +168,18 @@ export default function Footer() {
           <div className="border-t border-gray-700 dark:border-bg-secondary pt-8 mb-8">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="mb-4 md:mb-0">
-                <h3 className="text-lg font-semibold mb-2">
-                  Get AI company building tips
-                </h3>
-                <p className="text-gray-300 dark:text-text-tertiary">
-                  Stay updated with the latest AI automation strategies and product
-                  updates.
+                <h4 className="text-lg font-semibold">Stay Updated</h4>
+                <p className="text-gray-400">
+                  Join our newsletter for AI insights.
                 </p>
               </div>
-              <div className="flex w-full md:w-auto">                <input
+              <div className="flex w-full md:w-auto">
+                <input
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 md:w-64 px-4 py-3 bg-gray-800 dark:bg-bg-dark-secondary border border-gray-600 dark:border-bg-dark-tertiary rounded-l-lg focus:outline-none focus:border-primary-blue text-white"
                 />
-                <button className="px-6 py-3 bg-primary-blue hover:bg-primary-blue-dark text-white rounded-r-lg transition-colors">
+                <button className="px-6 py-3 bg-primary-blue hover:bg-primary-blue-dark rounded-r-lg font-semibold transition-colors">
                   Subscribe
                 </button>
               </div>
@@ -198,45 +189,43 @@ export default function Footer() {
           {/* Bottom Footer */}
           <div className="border-t border-gray-700 dark:border-bg-secondary pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between">
-              {/* Logo and Copyright */}
-              <div className="flex items-center space-x-4 mb-4 md:mb-0">                <div className="flex items-center space-x-2">
-                  <Image 
-                    src="/logo.png" 
-                    alt="ProtoHive Logo" 
-                    width={32} 
-                    height={32} 
-                    className="rounded-lg"
-                  />
-                  <span className="text-xl font-bold">ProtoHive</span>
-                </div>
-                <span className="text-gray-300 dark:text-text-tertiary">
-                  © 2025 ProtoHive. All rights reserved.
-                </span>
+              <div className="flex items-center space-x-4 mb-4 md:mb-0">
+                <Image
+                  src="/logo.png"
+                  alt="ProtoHive Logo"
+                  width={32}
+                  height={32}
+                />
+                <span className="font-bold text-xl">ProtoHive</span>
               </div>
 
-              {/* Social Links */}
+              <div className="text-gray-400 text-sm mb-4 md:mb-0">
+                &copy; {new Date().getFullYear()} ProtoHive. All rights reserved.
+              </div>
+
               <div className="flex items-center space-x-4">
-                <Link
-                  href="mailto:hello@protohive.com"
-                  className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
-                >
-                  <Mail size={20} />
-                </Link>
-                <Link
+                <a
                   href="#"
-                  className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
                 >
                   <Twitter size={20} />
-                </Link>
-                <Link
+                </a>
+                <a
                   href="#"
-                  className="text-gray-300 dark:text-text-tertiary hover:text-white dark:hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
                 >
                   <Linkedin size={20} />
-                </Link>
+                </a>
+                <a
+                  href="mailto:contact@protohive.com"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <Mail size={20} />
+                </a>
               </div>
             </div>
-          </div>        </div>
+          </div>
+        </div>
       </div>
 
       <WaitlistModal

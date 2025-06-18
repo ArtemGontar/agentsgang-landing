@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://protohive.com/sitemap.xml

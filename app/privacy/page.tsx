@@ -1,11 +1,19 @@
-import ComingSoonPage from '@/components/ComingSoonPage'
+"use client"
+import { useEffect, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
 
 export default function PrivacyPage() {
+  const [markdown, setMarkdown] = useState('')
+
+  useEffect(() => {
+    fetch('/legal/privacy_policy.md')
+      .then((res) => res.text())
+      .then((text) => setMarkdown(text))
+  }, [])
+
   return (
-    <ComingSoonPage
-      title="Privacy Policy"
-      description="Learn how ProtoHive protects your data and respects your privacy."
-      comingSoonText="We're finalizing our comprehensive privacy policy. We're committed to transparency and data protection, following GDPR and other privacy regulations."
-    />
+    <div className="prose lg:prose-xl mx-auto px-4 py-8">
+      <ReactMarkdown>{markdown}</ReactMarkdown>
+    </div>
   )
 }

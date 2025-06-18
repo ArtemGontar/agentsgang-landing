@@ -1,11 +1,19 @@
-import ComingSoonPage from '@/components/ComingSoonPage'
+"use client"
+import { useEffect, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
 
 export default function TermsPage() {
+  const [markdown, setMarkdown] = useState('')
+
+  useEffect(() => {
+    fetch('/legal/terms_and_conditions.md')
+      .then((res) => res.text())
+      .then((text) => setMarkdown(text))
+  }, [])
+
   return (
-    <ComingSoonPage
-      title="Terms of Service"
-      description="Our terms and conditions for using the ProtoHive platform."
-      comingSoonText="Our legal team is preparing comprehensive terms of service that protect both our users and our platform while ensuring fair usage."
-    />
+    <div className="prose lg:prose-xl mx-auto px-4 py-8">
+      <ReactMarkdown>{markdown}</ReactMarkdown>
+    </div>
   )
 }

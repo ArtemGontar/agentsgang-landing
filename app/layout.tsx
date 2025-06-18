@@ -65,6 +65,7 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  manifest: '/site.webmanifest'
 }
 
 export default function RootLayout({
@@ -75,28 +76,42 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning={true}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />        
         <script
+          type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.documentElement.classList.add('dark')
-                } else {
-                  document.documentElement.classList.remove('dark')
-                }
-              } catch (_) {}
-            `,
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              'name': 'ProtoHive',
+              'url': 'https://protohive.com',
+              'logo': 'https://protohive.com/logo.png',
+              'sameAs': [
+                'https://twitter.com/protohive',
+                'https://www.linkedin.com/company/protohive',
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              'name': 'ProtoHive',
+              'url': 'https://protohive.com',
+              'potentialAction': {
+                '@type': 'SearchAction',
+                'target': 'https://protohive.com/search?q={search_term_string}',
+                'query-input': 'required name=search_term_string'
+              }
+            })
           }}
         />
       </head>
-      <body className={`${inter.className} antialiased bg-bg-primary dark:bg-bg-dark transition-colors duration-300`} suppressHydrationWarning={true}>
+      <body className={`${inter.variable} bg-white dark:bg-bg-dark font-sans antialiased`}>
         {children}
       </body>
     </html>
-  )
+  );
 }

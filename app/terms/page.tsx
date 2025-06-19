@@ -1,19 +1,16 @@
-"use client"
-import { useEffect, useState } from 'react'
-import ReactMarkdown from 'react-markdown'
+import fs from 'fs'
+import path from 'path'
+import { MDXRemote } from 'next-mdx-remote/rsc'
 
-export default function TermsPage() {
-  const [markdown, setMarkdown] = useState('')
-
-  useEffect(() => {
-    fetch('/legal/terms_and_conditions.md')
-      .then((res) => res.text())
-      .then((text) => setMarkdown(text))
-  }, [])
+export default async function TermsPage() {
+  const filePath = path.join(process.cwd(), 'legal', 'terms_and_conditions.md')
+  const fileContents = fs.readFileSync(filePath, 'utf8')
 
   return (
-    <div className="prose lg:prose-xl mx-auto px-4 py-8">
-      <ReactMarkdown>{markdown}</ReactMarkdown>
-    </div>
+    <section className="container-custom py-8">
+      <article className="prose max-w-none lg:prose-xl dark:prose-invert mx-auto">
+        <MDXRemote source={fileContents} />
+      </article>
+    </section>
   )
 }

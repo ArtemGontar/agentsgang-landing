@@ -30,7 +30,7 @@ export default function Header() {
       }`}
     >
       <nav className="container-custom">
-        <div className="flex items-center justify-between h-20">          
+        <div className="flex items-center justify-between h-20 border-b border-bg-tertiary dark:border-bg-secondary">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image 

@@ -144,28 +144,12 @@ export default function Footer() {
                     Privacy Policy
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href="/security"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    Security
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/gdpr"
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    GDPR
-                  </Link>
-                </li>
               </ul>
             </div>
           </div>
 
           {/* Newsletter Signup */}
-          <div className="border-t border-gray-700 dark:border-bg-secondary pt-8 mb-8">
+          {/* <div className="border-t border-bg-tertiary dark:border-bg-secondary pt-8 mb-8">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="mb-4 md:mb-0">
                 <h4 className="text-lg font-semibold">Stay Updated</h4>
@@ -184,10 +168,10 @@ export default function Footer() {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Bottom Footer */}
-          <div className="border-t border-gray-700 dark:border-bg-secondary pt-8">
+          <div className="border-t border-bg-tertiary dark:border-bg-secondary pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="flex items-center space-x-4 mb-4 md:mb-0">
                 <Image

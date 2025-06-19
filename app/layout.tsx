@@ -76,6 +76,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning={true}>
       <head>
+        {/* Cookiebot (Usercentrics) Consent Platform */}
+        <script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
+        <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="1Whz1yxHwMcHuI" async></script>
         {/* Google Analytics */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
         <script

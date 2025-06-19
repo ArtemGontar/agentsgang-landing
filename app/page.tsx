@@ -12,8 +12,8 @@ export default function HomePage() {
     <main className="min-h-screen">
       <Header />
       <HeroSection />
-      <HowItWorksSection />
       <FeaturesSection />
+      <HowItWorksSection />
       <SocialProofSection />
       <PricingSection />
       <FAQSection />

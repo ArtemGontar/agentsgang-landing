@@ -18,12 +18,25 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    setIsSubmitted(true)
-    setIsSubmitting(false)
+    try {
+      // Bypass CORS via no-cors mode (response will be opaque)
+      await fetch(
+        'https://script.google.com/macros/s/AKfycbxi26dTglugZuJUK6tb57hJKbn6C1cDAiZXzMzq7wHYYHXA2Rsm20Lsq4bDgxIDer76/exec',
+        {
+          method: 'POST',
+          mode: 'no-cors',
+          // default content-type text/plain is acceptable
+          body: JSON.stringify({ name, email, company }),
+        }
+      )
+      // Assume success on opaque response
+      setIsSubmitted(true)
+    } catch (error) {
+      console.error('Submission error', error)
+      // Optionally show an error message
+    } finally {
+      setIsSubmitting(false)
+    }
   }
   const handleClose = () => {
     setIsSubmitted(false)

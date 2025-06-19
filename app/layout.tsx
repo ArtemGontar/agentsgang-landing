@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Script from 'next/script';
+import { CookieConsentScripts } from '../components/CookieConsentScripts';
+import { GoogleTagManagerScripts } from '../components/GoogleTagManagerScripts';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -76,24 +79,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning={true}>
       <head>
-        {/* Cookiebot (Usercentrics) Consent Platform */}
-        <script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
-        <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="1Whz1yxHwMcHuI" async></script>
-        {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-W9C9875ENQ');
-            `,
-          }}
-        />
+        <CookieConsentScripts />
+        <GoogleTagManagerScripts />
         {/* Structured Data */}
-        <script
+        <Script
           type="application/ld+json"
+          id="org-ldjson"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
@@ -108,8 +100,10 @@ export default function RootLayout({
             })
           }}
         />
-        <script
+        <Script
           type="application/ld+json"
+          id="website-ldjson"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',

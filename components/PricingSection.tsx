@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Check, Star, Crown } from 'lucide-react'
 import ComingSoonModal from './ComingSoonModal'
 import WaitlistModal from './WaitlistModal'
+import { fireGTMEvent } from './GoogleTagManagerScripts'
 
 export default function PricingSection() {
   const [comingSoonOpen, setComingSoonOpen] = useState(false)
@@ -123,7 +124,15 @@ export default function PricingSection() {
               </div>              {/* CTA Button */}
               <button 
                 className={`${plan.ctaStyle} w-full`}
-                onClick={() => setComingSoonOpen(true)}
+                onClick={() => {
+                  setComingSoonOpen(true);
+                  fireGTMEvent('cta_click', {
+                    event_category: 'engagement',
+                    event_label: `Pricing ${plan.name} CTA`,
+                    location: 'pricing',
+                    plan: plan.name,
+                  });
+                }}
               >
                 {plan.cta}
               </button>
@@ -169,10 +178,22 @@ export default function PricingSection() {
             Have questions about pricing or features?
           </p>
           <div className="flex flex-col gap-4 justify-center items-center">
-            <a href="#faq" className="btn-secondary">
+            <a href="#faq" className="btn-secondary" onClick={() => {
+              fireGTMEvent('cta_click', {
+                event_category: 'engagement',
+                event_label: 'Pricing View FAQ',
+                location: 'pricing',
+              });
+            }}>
               View FAQ
             </a>
-            <a href="/contact" className="text-primary-blue dark:text-secondary-purple hover:text-primary-blue-dark dark:hover:text-secondary-purple-light transition-colors">
+            <a href="/contact" className="text-primary-blue dark:text-secondary-purple hover:text-primary-blue-dark dark:hover:text-secondary-purple-light transition-colors" onClick={() => {
+              fireGTMEvent('cta_click', {
+                event_category: 'engagement',
+                event_label: 'Pricing Contact Sales',
+                location: 'pricing',
+              });
+            }}>
               Contact Sales →
             </a>
           </div>        </div>

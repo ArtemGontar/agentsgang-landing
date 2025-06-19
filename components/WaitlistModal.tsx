@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { X, Mail, CheckCircle } from 'lucide-react'
+import { fireGTMEvent } from './GoogleTagManagerScripts'
 
 interface WaitlistModalProps {
   open: boolean
@@ -29,7 +30,15 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
           body: JSON.stringify({ name, email, company }),
         }
       )
-      // Assume success on opaque response
+      // Fire GTM event for waitlist signup
+      fireGTMEvent('waitlist_signup', {
+        event_category: 'engagement',
+        event_label: 'Waitlist Modal',
+        method: 'waitlist_form',
+        name,
+        email,
+        company,
+      })
       setIsSubmitted(true)
     } catch (error) {
       console.error('Submission error', error)
@@ -50,11 +59,11 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 min-h-screen">
       {/* Backdrop */}
-      <div 
+      <div
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
         onClick={handleClose}
       />
-      
+
       {/* Modal */}
       <div className="relative bg-white dark:bg-bg-dark rounded-2xl shadow-xl max-w-md w-full p-6 max-h-[90vh] overflow-y-auto transform scale-100 transition-transform duration-200 m-auto">
         {/* Close Button */}

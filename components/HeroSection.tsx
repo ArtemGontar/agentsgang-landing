@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Play, CheckCircle } from 'lucide-react'
 import WaitlistModal from './WaitlistModal'
 import Image from 'next/image'
+import { fireGTMEvent } from './GoogleTagManagerScripts'
 
 export default function HeroSection() {
   const [waitlistOpen, setWaitlistOpen] = useState(false)
@@ -24,10 +25,23 @@ export default function HeroSection() {
             </p>
               {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <button className="btn-primary" onClick={() => setWaitlistOpen(true)}>
+              <button className="btn-primary" onClick={() => {
+                setWaitlistOpen(true);
+                fireGTMEvent('cta_click', {
+                  event_category: 'engagement',
+                  event_label: 'Hero Join Waitlist',
+                  location: 'hero',
+                });
+              }}>
                 Join Waitlist
               </button>
-              <Link href="#demo" className="btn-secondary flex items-center justify-center gap-2">
+              <Link href="#demo" className="btn-secondary flex items-center justify-center gap-2" onClick={() => {
+                fireGTMEvent('cta_click', {
+                  event_category: 'engagement',
+                  event_label: 'Hero Watch Demo',
+                  location: 'hero',
+                });
+              }}>
                 <Play size={20} />
                 Watch Demo
               </Link>

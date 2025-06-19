@@ -1,8 +1,8 @@
-# Technical SEO Audit: ProtoHive Landing Page
+# Technical SEO Audit: AgentsGang Landing Page
 
 **Audit Date:** 2025-06-18
 
-This document outlines the findings of a technical SEO audit conducted on the ProtoHive landing page. The goal is to identify areas for improvement to enhance search engine visibility, crawlability, and user experience.
+This document outlines the findings of a technical SEO audit conducted on the AgentsGang landing page. The goal is to identify areas for improvement to enhance search engine visibility, crawlability, and user experience.
 
 ---
 

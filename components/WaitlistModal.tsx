@@ -76,7 +76,7 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
                 Join the Waitlist
               </h2>
               <p className="text-text-secondary dark:text-text-tertiary">
-                Be the first to know when ProtoHive launches and get early access to build your AI company.
+                Be the first to know when AgentsGang launches and get early access to build your AI company.
               </p>
             </div>
 
@@ -146,7 +146,7 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
               You're on the list!
             </h2>
             <p className="text-text-secondary dark:text-text-tertiary mb-6">
-              Thanks for joining our waitlist. We'll send you updates on ProtoHive's progress and notify you as soon as we launch.
+              Thanks for joining our waitlist. We'll send you updates on AgentsGang's progress and notify you as soon as we launch.
             </p>
             <button
               onClick={handleClose}

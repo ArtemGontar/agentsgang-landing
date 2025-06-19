@@ -3,7 +3,7 @@ import { Star, Quote, Users, TrendingUp, Shield, CheckCircle } from 'lucide-reac
 export default function SocialProofSection() {
   const testimonials = [
     {
-      quote: "ProtoHive transformed how I run my consulting business. My AI marketing agent handles campaign creation while the analyst agent tracks performance. I've saved 15 hours per week and increased client satisfaction.",
+      quote: "AgentsGang transformed how I run my consulting business. My AI marketing agent handles campaign creation while the analyst agent tracks performance. I've saved 15 hours per week and increased client satisfaction.",
       author: "Sarah Chen",
       title: "Founder",
       company: "GrowthLab Consulting",
@@ -19,7 +19,7 @@ export default function SocialProofSection() {
       avatar: "MR"
     },
     {
-      quote: "As a solo entrepreneur, ProtoHive gave me superpowers. My AI agents handle everything from market research to content creation, allowing me to focus on strategy and client relationships.",
+      quote: "As a solo entrepreneur, AgentsGang gave me superpowers. My AI agents handle everything from market research to content creation, allowing me to focus on strategy and client relationships.",
       author: "Emily Thompson",
       title: "Independent Consultant",
       company: "Thompson Digital",
@@ -83,7 +83,7 @@ export default function SocialProofSection() {
             Join Thousands of Successful Entrepreneurs
           </h2>
           <p className="text-body-large text-text-secondary dark:text-text-tertiary max-w-3xl mx-auto">
-            Entrepreneurs worldwide are building AI-powered companies that scale faster, work smarter, and achieve more with ProtoHive.
+            Entrepreneurs worldwide are building AI-powered companies that scale faster, work smarter, and achieve more with AgentsGang.
           </p>
         </div>
 

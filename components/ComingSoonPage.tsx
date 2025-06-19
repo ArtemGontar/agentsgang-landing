@@ -22,12 +22,12 @@ export default function ComingSoonPage({
         <div className="container-custom py-4">          <Link href="/" className="flex items-center space-x-2">
             <Image 
               src="/logo.png" 
-              alt="ProtoHive Logo" 
+              alt="AgentsGang Logo" 
               width={32} 
               height={32} 
               className="rounded-lg"
             />
-            <span className="text-xl font-bold text-text-primary dark:text-white">ProtoHive</span>
+            <span className="text-xl font-bold text-text-primary dark:text-white">AgentsGang</span>
           </Link>
         </div>
       </header>
@@ -71,7 +71,7 @@ export default function ComingSoonPage({
             </Link>
             
             <a
-              href="mailto:hello@protohive.com"
+              href="mailto:hello@agentsgang.com"
               className="btn-secondary inline-flex items-center justify-center w-full sm:w-auto"
             >
               <Mail size={20} className="mr-2" />

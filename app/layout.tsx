@@ -9,8 +9,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://protohive.com'),
-  title: 'ProtoHive - Build Your AI-Powered Company in Minutes',
+  metadataBase: new URL('https://agentsgang.com'),
+  title: 'AgentsGang - Build Your AI-Powered Company in Minutes',
   description: 'Create specialized AI agents that work together as your virtual team — handling marketing, development, analysis, and more while you focus on strategy.',
   icons: {
     icon: [
@@ -28,18 +28,18 @@ export const metadata: Metadata = {
     ]
   },
   keywords: 'AI agents, virtual team, AI automation, business AI, AI company, AI tools, artificial intelligence',
-  authors: [{ name: 'ProtoHive' }],
+  authors: [{ name: 'AgentsGang' }],
   openGraph: {
-    title: 'ProtoHive - Build Your AI-Powered Company in Minutes',
+    title: 'AgentsGang - Build Your AI-Powered Company in Minutes',
     description: 'Create specialized AI agents that work together as your virtual team — handling marketing, development, analysis, and more while you focus on strategy.',
-    url: 'https://protohive.com',
-    siteName: 'ProtoHive',
+    url: 'https://agentsgang.com',
+    siteName: 'AgentsGang',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'ProtoHive - AI-Powered Virtual Companies',
+        alt: 'AgentsGang - AI-Powered Virtual Companies',
       },
     ],
     locale: 'en_US',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ProtoHive - Build Your AI-Powered Company in Minutes',
+    title: 'AgentsGang - Build Your AI-Powered Company in Minutes',
     description: 'Create specialized AI agents that work together as your virtual team — handling marketing, development, analysis, and more while you focus on strategy.',
     images: ['/og-image.png'],
   },
@@ -82,12 +82,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Organization',
-              'name': 'ProtoHive',
-              'url': 'https://protohive.com',
-              'logo': 'https://protohive.com/logo.png',
+              'name': 'AgentsGang',
+              'url': 'https://agentsgang.com',
+              'logo': 'https://agentsgang.com/logo.png',
               'sameAs': [
-                'https://twitter.com/protohive',
-                'https://www.linkedin.com/company/protohive',
+                'https://twitter.com/agentsgang',
+                'https://www.linkedin.com/company/agentsgang',
               ]
             })
           }}
@@ -98,11 +98,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              'name': 'ProtoHive',
-              'url': 'https://protohive.com',
+              'name': 'AgentsGang',
+              'url': 'https://agentsgang.com',
               'potentialAction': {
                 '@type': 'SearchAction',
-                'target': 'https://protohive.com/search?q={search_term_string}',
+                'target': 'https://agentsgang.com/search?q={search_term_string}',
                 'query-input': 'required name=search_term_string'
               }
             })

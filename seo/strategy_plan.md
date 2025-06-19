@@ -1,8 +1,8 @@
-# SEO Strategy Plan: ProtoHive
+# SEO Strategy Plan: AgentsGang
 
 **Date:** 2025-06-18
 
-This document outlines a long-term SEO strategy for ProtoHive, focusing on sustainable growth, authority building, and content marketing. It prioritizes initiatives into quick wins and long-term projects.
+This document outlines a long-term SEO strategy for AgentsGang, focusing on sustainable growth, authority building, and content marketing. It prioritizes initiatives into quick wins and long-term projects.
 
 ---
 
@@ -29,7 +29,7 @@ The single most effective long-term SEO strategy is to build topical authority t
 
 #### Technical Implementation
 
-- **URL Structure:** `protohive.com/blog/[post-slug]` (e.g., `/blog/how-to-hire-ai-marketer`). This is a clean, standard structure.
+- **URL Structure:** `agentsgang.com/blog/[post-slug]` (e.g., `/blog/how-to-hire-ai-marketer`). This is a clean, standard structure.
 - **Folder Naming:** Create a new route in the `app` directory: `app/blog/page.tsx` for the blog index and `app/blog/[slug]/page.tsx` for individual posts.
 - **Content Management:** Use a **Markdown-based system with Next.js**. Store blog posts as `.md` or `.mdx` files in a new `/posts` or `/content/blog` directory at the root of the project. This is lightweight, integrates perfectly with the existing tech stack, and is highly performant.
 
@@ -44,21 +44,21 @@ The single most effective long-term SEO strategy is to build topical authority t
 - **Sample Post Titles (Keyword-Targeted):
   - *"How to Automate Your Marketing with an AI Agent"* (Targets: "AI marketing automation")
   - *"Building a Lean Startup with a Virtual AI Team"* (Targets: "lean startup AI")
-  - *"ProtoHive vs. Hiring Freelancers: A Cost-Benefit Analysis"* (Targets: comparison keywords)
+  - *"AgentsGang vs. Hiring Freelancers: A Cost-Benefit Analysis"* (Targets: comparison keywords)
 
 ### 2. Authority Building & Link-Building Tactics
 
 Content alone is not enough; authority must be built.
 
 - **Digital PR:** Create data-driven reports or infographics about AI adoption in startups and pitch them to tech journalists. (e.g., "*New Study: 60% of Founders Plan to Hire an AI Agent in 2026*").
-- **Guest Posting:** Write for established blogs in the tech, AI, and startup spaces. Include a link back to a relevant ProtoHive blog post or the homepage in the author bio.
-- **Community Engagement:** Answer questions on platforms like Quora, Reddit (r/startup, r/artificial), and Hacker News related to AI and automation, subtly referencing ProtoHive where appropriate.
+- **Guest Posting:** Write for established blogs in the tech, AI, and startup spaces. Include a link back to a relevant AgentsGang blog post or the homepage in the author bio.
+- **Community Engagement:** Answer questions on platforms like Quora, Reddit (r/startup, r/artificial), and Hacker News related to AI and automation, subtly referencing AgentsGang where appropriate.
 
 ### 3. E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)
 
 Google prioritizes content from sources that demonstrate strong E-E-A-T signals.
 
 - **Authoritative Content:** Ensure all blog posts are well-researched, accurate, and provide unique value.
-- **Author Bios:** Add author names and short bios to each blog post to showcase the expertise of the writer (e.g., "*John Doe is a co-founder at ProtoHive and an expert in AI-driven business solutions*").
-- **Enhance `About Us` Page:** The `app/about/page.tsx` should be expanded to include detailed information about the founding team, the company's mission, and what makes ProtoHive a credible solution.
+- **Author Bios:** Add author names and short bios to each blog post to showcase the expertise of the writer (e.g., "*John Doe is a co-founder at AgentsGang and an expert in AI-driven business solutions*").
+- **Enhance `About Us` Page:** The `app/about/page.tsx` should be expanded to include detailed information about the founding team, the company's mission, and what makes AgentsGang a credible solution.
 - **Showcase Social Proof:** Continue adding customer testimonials, case studies, and logos as the user base grows. This builds trust.

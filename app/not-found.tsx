@@ -9,7 +9,7 @@ export default function NotFound() {
         <div className="flex justify-center mb-8">
           <Image 
             src="/logo.png" 
-            alt="ProtoHive Logo" 
+            alt="AgentsGang Logo" 
             width={64} 
             height={64} 
             className="rounded-2xl"
@@ -28,7 +28,7 @@ export default function NotFound() {
 
         {/* Description */}
         <p className="text-body-large text-text-secondary dark:text-text-tertiary mb-8">
-          Oops! It looks like this page doesn't exist. Our AI agents are still building this part of ProtoHive.
+          Oops! It looks like this page doesn't exist. Our AI agents are still building this part of AgentsGang.
         </p>
 
         {/* Actions */}
@@ -55,10 +55,10 @@ export default function NotFound() {
           <p className="text-body-small text-text-tertiary dark:text-text-tertiary">
             Need help? Contact us at{' '}
             <a 
-              href="mailto:hello@protohive.com"
+              href="mailto:hello@agentsgang.com"
               className="text-primary-blue hover:text-primary-blue-dark dark:text-secondary-purple dark:hover:text-secondary-purple-light transition-colors"
             >
-              hello@protohive.com
+              hello@agentsgang.com
             </a>
           </p>
         </div>

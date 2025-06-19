@@ -1,7 +1,7 @@
 # Header and Modal Improvements Implementation Guide
 
 ## Overview
-This document outlines the recent improvements made to the ProtoHive landing page based on product owner requirements. The changes focus on improving user experience, visual consistency, and reducing redundancy in the navigation.
+This document outlines the recent improvements made to the AgentsGang landing page based on product owner requirements. The changes focus on improving user experience, visual consistency, and reducing redundancy in the navigation.
 
 ## Changes Implemented
 
@@ -94,7 +94,7 @@ This document outlines the recent improvements made to the ProtoHive landing pag
 ```tsx
 {/* Contact Sales Prompt */}
 <div className="flex flex-col items-center mb-8">
-  <a href="mailto:sales@protohive.com" className="btn-primary mb-3 text-lg px-8 py-3">
+  <a href="mailto:sales@agentsgang.com" className="btn-primary mb-3 text-lg px-8 py-3">
     Contact Sales
   </a>
   <span className="text-text-secondary...">Have questions? Reach out to our team before browsing the FAQ.</span>

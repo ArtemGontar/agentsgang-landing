@@ -61,7 +61,7 @@ export default function HeroSection() {
                       <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
                       <div className="w-3 h-3 bg-red-400 rounded-full"></div>
                     </div>
-                    <div className="text-xs font-semibold text-text-primary dark:text-white mb-2">ProtoHive Dashboard</div>
+                    <div className="text-xs font-semibold text-text-primary dark:text-white mb-2">AgentsGang Dashboard</div>
                     <div className="grid grid-cols-2 gap-2">
                       <div className="h-2 bg-primary-blue/20 rounded"></div>
                       <div className="h-2 bg-secondary-purple/20 rounded"></div>

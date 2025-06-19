@@ -1,14 +1,14 @@
 # Feature Specification: Public Landing Page
 
 ## Feature Name
-**ProtoHive Public Landing Page**
+**AgentsGang Public Landing Page**
 
 ## Overview / Purpose
-The public-facing landing page serves as the primary conversion funnel for ProtoHive, introducing visitors to the concept of creating and managing mini AI-powered companies with specialized agents. The page must clearly communicate the value proposition, build trust, and convert visitors into registered users through compelling copy, modern design, and strategic CTAs.
+The public-facing landing page serves as the primary conversion funnel for AgentsGang, introducing visitors to the concept of creating and managing mini AI-powered companies with specialized agents. The page must clearly communicate the value proposition, build trust, and convert visitors into registered users through compelling copy, modern design, and strategic CTAs.
 
 ## User Story
-**As a** potential customer visiting ProtoHive for the first time  
-**I want to** quickly understand what ProtoHive offers and how it can benefit my business  
+**As a** potential customer visiting AgentsGang for the first time  
+**I want to** quickly understand what AgentsGang offers and how it can benefit my business  
 **So that I can** make an informed decision to sign up and start building my AI-powered company  
 
 ## Page Structure / UX Layout
@@ -132,7 +132,7 @@ The public-facing landing page serves as the primary conversion funnel for Proto
 
 #### Key Questions:
 1. "How is this different from ChatGPT or other AI tools?"
-2. "Do I need technical knowledge to use ProtoHive?"
+2. "Do I need technical knowledge to use AgentsGang?"
 3. "How do AI agents communicate with each other?"
 4. "What happens to my data and conversations?"
 5. "Can I integrate with my existing tools?"
@@ -168,7 +168,7 @@ The public-facing landing page serves as the primary conversion funnel for Proto
 
 **Social & Contact**
 - Twitter, LinkedIn icons
-- hello@protohive.com
+- hello@agentsgang.com
 - Newsletter signup: "Get AI company building tips"
 
 ## Visual Hierarchy

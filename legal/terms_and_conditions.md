@@ -1,12 +1,12 @@
-# Terms and Conditions for ProtoHive
+# Terms and Conditions for AgentsGang
 
 **Last Updated:** June 18, 2025
 
-Welcome to ProtoHive! These Terms and Conditions ("Terms") govern your use of our platform and services. By accessing or using ProtoHive, you agree to be bound by these Terms.
+Welcome to AgentsGang! These Terms and Conditions ("Terms") govern your use of our platform and services. By accessing or using AgentsGang, you agree to be bound by these Terms.
 
 ## 1. Introduction
 
-ProtoHive ("we," "us," or "our") provides AI-powered agents for various use cases. Our platform is designed for founders, developers, and individuals looking to optimize their workflows.
+AgentsGang ("we," "us," or "our") provides AI-powered agents for various use cases. Our platform is designed for founders, developers, and individuals looking to optimize their workflows.
 
 ## 2. User Accounts
 
@@ -46,7 +46,7 @@ Our services integrate with third-party APIs (e.g., OpenAI, Gemini). Your use of
 
 ## 7. Intellectual Property
 
-We own all right, title, and interest in and to the ProtoHive platform and our services, including all associated intellectual property rights. You are granted a limited, non-exclusive, revocable license to use our services as prescribed in these Terms.
+We own all right, title, and interest in and to the AgentsGang platform and our services, including all associated intellectual property rights. You are granted a limited, non-exclusive, revocable license to use our services as prescribed in these Terms.
 
 ## 8. Disclaimers and Limitation of Liability
 

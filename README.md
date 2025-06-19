@@ -1,6 +1,6 @@
-# ProtoHive Landing Page
+# AgentsGang Landing Page
 
-A modern, responsive landing page for ProtoHive - an AI-powered virtual company platform built with Next.js 14, TypeScript, and Tailwind CSS.
+A modern, responsive landing page for AgentsGang - an AI-powered virtual company platform built with Next.js 14, TypeScript, and Tailwind CSS.
 
 ## Features
 
@@ -43,7 +43,7 @@ npm run dev
 ## Project Structure
 
 ```
-protohive-ui/
+agentsgang-ui/
 ├── app/                    # Next.js App Router
 │   ├── globals.css        # Global styles and Tailwind imports
 │   ├── layout.tsx         # Root layout with metadata

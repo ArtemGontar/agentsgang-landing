@@ -1,8 +1,8 @@
-# ProtoHive Technical Architecture Specification
+# AgentsGang Technical Architecture Specification
 
 ## Executive Summary
 
-ProtoHive is a SaaS platform enabling users to create and manage AI-powered companies with specialized agents. This document outlines the technical architecture for a scalable, secure, and maintainable MVP that can grow with the business while maintaining cost efficiency.
+AgentsGang is a SaaS platform enabling users to create and manage AI-powered companies with specialized agents. This document outlines the technical architecture for a scalable, secure, and maintainable MVP that can grow with the business while maintaining cost efficiency.
 
 ## Technology Stack Recommendations
 
@@ -493,8 +493,8 @@ interface LogEntry {
 
 ## Conclusion
 
-This architecture provides a solid foundation for ProtoHive's MVP while maintaining flexibility for future growth. The technology choices prioritize developer productivity, cost efficiency, and scalability, with clear upgrade paths as the platform grows.
+This architecture provides a solid foundation for AgentsGang's MVP while maintaining flexibility for future growth. The technology choices prioritize developer productivity, cost efficiency, and scalability, with clear upgrade paths as the platform grows.
 
 The modular architecture allows for iterative development and easy testing of new features. Security and observability are built in from the start, reducing technical debt and compliance risks.
 
-Regular architecture reviews and performance monitoring will ensure the system continues to meet business needs as ProtoHive scales from MVP to a fully-featured SaaS platform.
+Regular architecture reviews and performance monitoring will ensure the system continues to meet business needs as AgentsGang scales from MVP to a fully-featured SaaS platform.

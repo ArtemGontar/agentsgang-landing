@@ -1,4 +1,4 @@
-# ProtoHive Landing Page - Visual Design Specification
+# AgentsGang Landing Page - Visual Design Specification
 
 ## Design Philosophy & Visual Strategy
 
@@ -488,4 +488,4 @@ transition: color 150ms ease;
 - [ ] Social proof strategically placed
 - [ ] Trust indicators prominently displayed
 
-This visual design specification provides the foundation for creating a modern, conversion-optimized landing page that effectively communicates ProtoHive's value proposition while establishing trust and encouraging user sign-ups.
+This visual design specification provides the foundation for creating a modern, conversion-optimized landing page that effectively communicates AgentsGang's value proposition while establishing trust and encouraging user sign-ups.

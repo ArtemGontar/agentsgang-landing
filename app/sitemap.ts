@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tutorials'
   ];
 
-  const baseUrl = 'https://protohive.com';
+  const baseUrl = 'https://agentsgang.com';
 
   const staticUrls = staticPages.map(page => ({
     url: `${baseUrl}${page}`,

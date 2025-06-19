@@ -12,15 +12,15 @@ const FAQPageSchema = {
       name: 'How is this different from ChatGPT or other AI tools?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'While ChatGPT is a single AI assistant, ProtoHive creates a team of specialized AI agents that work together. Each agent has specific roles, tools, and memory, allowing them to collaborate on complex projects just like a real company. They can share context, build on each other\'s work, and maintain long-term knowledge about your business.',
+        text: 'While ChatGPT is a single AI assistant, AgentsGang creates a team of specialized AI agents that work together. Each agent has specific roles, tools, and memory, allowing them to collaborate on complex projects just like a real company. They can share context, build on each other\'s work, and maintain long-term knowledge about your business.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do I need technical knowledge to use ProtoHive?',
+      name: 'Do I need technical knowledge to use AgentsGang?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Not at all! ProtoHive is designed for entrepreneurs and business owners, not developers. You interact with your AI agents through a simple chat interface, just like messaging a team member. The agents handle all the technical complexity behind the scenes.',
+        text: 'Not at all! AgentsGang is designed for entrepreneurs and business owners, not developers. You interact with your AI agents through a simple chat interface, just like messaging a team member. The agents handle all the technical complexity behind the scenes.',
       },
     },
     {
@@ -44,7 +44,7 @@ const FAQPageSchema = {
         name: 'Can I integrate with my existing tools?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes! ProtoHive agents can integrate with popular tools like Google Workspace, Slack, Trello, GitHub, and many others. We also provide API access for custom integrations. Agents can pull data from your existing tools and push results back to your workflows.',
+          text: 'Yes! AgentsGang agents can integrate with popular tools like Google Workspace, Slack, Trello, GitHub, and many others. We also provide API access for custom integrations. Agents can pull data from your existing tools and push results back to your workflows.',
         },
       },
       {
@@ -78,7 +78,7 @@ export default function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-body-large text-text-secondary dark:text-text-tertiary max-w-3xl mx-auto">
-            Get answers to common questions about ProtoHive, AI agents, and building your virtual company.
+            Get answers to common questions about AgentsGang, AI agents, and building your virtual company.
           </p>
         </div>        {/* FAQ Items */}
         <div className="max-w-4xl mx-auto">

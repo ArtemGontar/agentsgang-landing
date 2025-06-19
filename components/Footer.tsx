@@ -192,15 +192,15 @@ export default function Footer() {
               <div className="flex items-center space-x-4 mb-4 md:mb-0">
                 <Image
                   src="/logo.png"
-                  alt="ProtoHive Logo"
+                  alt="AgentsGang Logo"
                   width={32}
                   height={32}
                 />
-                <span className="font-bold text-xl">ProtoHive</span>
+                <span className="font-bold text-xl">AgentsGang</span>
               </div>
 
               <div className="text-gray-400 text-sm mb-4 md:mb-0">
-                &copy; {new Date().getFullYear()} ProtoHive. All rights reserved.
+                &copy; {new Date().getFullYear()} AgentsGang. All rights reserved.
               </div>
 
               <div className="flex items-center space-x-4">
@@ -217,7 +217,7 @@ export default function Footer() {
                   <Linkedin size={20} />
                 </a>
                 <a
-                  href="mailto:contact@protohive.com"
+                  href="mailto:contact@agentsgang.com"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   <Mail size={20} />

@@ -35,12 +35,12 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-2">
             <Image 
               src="/logo.png" 
-              alt="ProtoHive Logo" 
+              alt="AgentsGang Logo" 
               width={32} 
               height={32} 
               className="rounded-lg"
             />
-            <span className="text-xl font-bold text-text-primary dark:text-white">ProtoHive</span>
+            <span className="text-xl font-bold text-text-primary dark:text-white">AgentsGang</span>
           </Link>
 
           {/* Desktop Navigation */}

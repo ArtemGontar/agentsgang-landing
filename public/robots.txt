@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://protohive.com/sitemap.xml
+Sitemap: https://agentsgang.com/sitemap.xml

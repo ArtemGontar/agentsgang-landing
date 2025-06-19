@@ -1,12 +1,12 @@
-# Privacy Policy for ProtoHive
+# Privacy Policy for AgentsGang
 
 **Last Updated:** June 18, 2025
 
-Welcome to ProtoHive! This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform. As a company based in Spain, we are committed to complying with the General Data Protection Regulation (GDPR) and other international privacy standards.
+Welcome to AgentsGang! This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform. As a company based in Spain, we are committed to complying with the General Data Protection Regulation (GDPR) and other international privacy standards.
 
 ## 1. Who We Are
 
-ProtoHive ("we," "us," or "our") is a platform providing AI-agents for various use cases. Our legal entity is a sole proprietorship registered in Spain.
+AgentsGang ("we," "us," or "our") is a platform providing AI-agents for various use cases. Our legal entity is a sole proprietorship registered in Spain.
 
 ## 2. Information We Collect
 

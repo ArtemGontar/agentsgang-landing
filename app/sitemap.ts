@@ -12,9 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/case-studies',
     '/community',
     '/docs',
-    '/gdpr',
     '/help',
-    '/security',
     '/tutorials'
   ];
 

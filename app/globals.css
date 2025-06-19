@@ -4,12 +4,25 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply border-gray-200 dark:border-gray-700;
+  :root {
+    /* Light theme CSS variables */
+    --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #F9FAFB 100%);
+    --gradient-cta: linear-gradient(135deg, #007AFF 0%, #0051CC 100%);
+    --gradient-hero: linear-gradient(135deg, #007AFF 0%, #7C3AED 100%);
   }
   
+  .dark {
+    /* Dark theme CSS variables */
+    --gradient-card: linear-gradient(145deg, #374151 0%, #1F2937 100%);
+    --gradient-cta: linear-gradient(135deg, #4DA3FF 0%, #A855F7 100%);
+    --gradient-hero: linear-gradient(135deg, #4DA3FF 0%, #A855F7 100%);
+  }
+  
+  * {
+    @apply border-gray-200 dark:border-gray-700;
+  }  
   body {
-    @apply bg-bg-primary dark:bg-bg-dark text-text-primary dark:text-white font-inter transition-colors duration-300;
+    @apply bg-bg-primary dark:bg-bg-dark text-text-primary dark:text-text-dark-primary font-inter transition-colors duration-300;
   }
   
   html {
@@ -45,9 +58,8 @@
   .btn-primary {
     @apply px-8 py-4 bg-gradient-cta text-white font-semibold rounded-xl shadow-button transition-all duration-200 hover:shadow-button-hover hover:-translate-y-0.5;
   }
-  
-  .btn-secondary {
-    @apply px-8 py-4 border-2 border-primary-blue text-primary-blue font-semibold rounded-xl transition-all duration-200 hover:bg-primary-blue hover:text-white;
+    .btn-secondary {
+    @apply px-8 py-4 border-2 border-primary-blue text-primary-blue font-semibold rounded-xl transition-all duration-200 hover:bg-primary-blue hover:text-white dark:border-secondary-purple dark:text-secondary-purple dark:hover:bg-secondary-purple;
   }
     .card {
     @apply bg-gradient-card dark:bg-gradient-card-dark border border-gray-200 dark:border-bg-dark-tertiary rounded-xl shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 hover:border-primary-blue/20;

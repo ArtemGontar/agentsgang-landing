@@ -7,8 +7,10 @@ export default async function PrivacyPage() {
   const fileContents = fs.readFileSync(filePath, 'utf8')
 
   return (
-    <div className="prose lg:prose-xl mx-auto px-4 py-8">
-      <MDXRemote source={fileContents} />
-    </div>
+    <section className="container-custom py-8">
+      <article className="prose max-w-none lg:prose-xl dark:prose-invert mx-auto">
+        <MDXRemote source={fileContents} />
+      </article>
+    </section>
   )
 }

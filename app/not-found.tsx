@@ -28,7 +28,7 @@ export default function NotFound() {
 
         {/* Description */}
         <p className="text-body-large text-text-secondary dark:text-text-tertiary mb-8">
-          Oops! It looks like this page doesn't exist. Our AI agents are still building this part of AgentsGang.
+          Oops! It looks like this page doesn&#39;t exist. Our AI agents are still building this part of AgentsGang.
         </p>
 
         {/* Actions */}

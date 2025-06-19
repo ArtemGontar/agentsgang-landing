@@ -43,7 +43,7 @@ export default function ComingSoonModal({ open, onClose, onJoinWaitlist }: Comin
             Coming Soon
           </h2>
           <p className="text-text-secondary dark:text-text-tertiary mb-6">
-            We're putting the finishing touches on our pricing plans. Join our waitlist to be notified when pricing becomes available.
+            We&#39;re putting the finishing touches on our pricing plans. Join our waitlist to be notified when pricing becomes available.
           </p>
           
           <div className="space-y-3">

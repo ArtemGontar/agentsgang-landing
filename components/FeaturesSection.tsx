@@ -56,7 +56,7 @@ export default function FeaturesSection() {
           </h2>
           <p className="text-body-large text-text-secondary dark:text-text-tertiary max-w-3xl mx-auto">
             Everything you need to build, manage, and scale your AI-powered company. 
-            From specialized agents to automated workflows, we've got you covered.
+            From specialized agents to automated workflows, we&#39;ve got you covered.
           </p>
         </div>
 
@@ -96,7 +96,7 @@ export default function FeaturesSection() {
                 </h3>
                 <p className="text-body-large text-text-secondary dark:text-text-tertiary mb-6">
                   Watch as your AI agents collaborate in real-time, sharing context and 
-                  building on each other's work to deliver comprehensive solutions.
+                  building on each other&#39;s work to deliver comprehensive solutions.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
@@ -131,7 +131,7 @@ export default function FeaturesSection() {
                       <div className="w-8 h-8 bg-secondary-purple rounded-full flex items-center justify-center text-white text-xs font-bold">M</div>
                       <div className="flex-1">
                         <div className="text-xs text-text-secondary dark:text-text-tertiary mb-1">Marketing Agent</div>
-                        <div className="bg-bg-secondary dark:bg-bg-dark rounded-lg p-2 text-sm text-text-primary dark:text-white">I've analyzed the target audience and created campaign briefs.</div>
+                        <div className="bg-bg-secondary dark:bg-bg-dark rounded-lg p-2 text-sm text-text-primary dark:text-white">I&#39;ve analyzed the target audience and created campaign briefs.</div>
                       </div>
                     </div>
                     
@@ -147,7 +147,7 @@ export default function FeaturesSection() {
                       <div className="w-8 h-8 bg-accent-green rounded-full flex items-center justify-center text-white text-xs font-bold">A</div>
                       <div className="flex-1">
                         <div className="text-xs text-text-secondary dark:text-text-tertiary mb-1">Analyst Agent</div>
-                        <div className="bg-bg-secondary dark:bg-bg-dark rounded-lg p-2 text-sm text-text-primary dark:text-white">I'll set up conversion tracking for the new page.</div>
+                        <div className="bg-bg-secondary dark:bg-bg-dark rounded-lg p-2 text-sm text-text-primary dark:text-white">I&#39;ll set up conversion tracking for the new page.</div>
                       </div>
                     </div>
                   </div>

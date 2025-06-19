@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { Play, CheckCircle } from 'lucide-react'
 import WaitlistModal from './WaitlistModal'
+import Image from 'next/image'
 
 export default function HeroSection() {
   const [waitlistOpen, setWaitlistOpen] = useState(false)
@@ -35,9 +36,11 @@ export default function HeroSection() {
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <div key={i} className="w-8 h-8 rounded-full bg-gray-100 dark:bg-bg-dark-tertiary border-2 border-white dark:border-bg-dark overflow-hidden flex items-center justify-center">
-                    <img 
+                    <Image 
                       src={`/user-profiles/user-profile${i}.png`}
                       alt={`User ${i}`}
+                      width={32}
+                      height={32}
                       className="w-full h-full object-contain"
                       style={{ imageRendering: 'auto' }}
                     />

@@ -1,4 +1,5 @@
 import { Star, Quote, Users, TrendingUp, Shield, CheckCircle } from 'lucide-react'
+import Image from 'next/image'
 
 export default function SocialProofSection() {
   const testimonials = [
@@ -144,12 +145,14 @@ export default function SocialProofSection() {
               </div>
               
               <blockquote className="text-lg text-text-primary dark:text-white mb-6 flex-1 leading-relaxed">
-                "{testimonial.quote}"
-              </blockquote>              
+                &quot;{testimonial.quote}&quot;
+              </blockquote>
               <div className="flex items-center gap-4 mt-auto">
-                <img 
+                <Image 
                   src={`/feedback/feedback${idx + 1}.png`}
                   alt={testimonial.author}
+                  width={48}
+                  height={48}
                   className="w-12 h-12 rounded-full object-contain shadow-md border-2 border-white dark:border-bg-dark flex-shrink-0"
                   style={{ imageRendering: 'auto', minWidth: '48px', minHeight: '48px' }}
                 />
@@ -181,6 +184,13 @@ export default function SocialProofSection() {
           <div className="bg-white dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-xl px-6 py-4 flex items-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-300">
             <CheckCircle className="text-accent-green" size={20} />
             <span className="text-accent-green font-bold">Enterprise Ready</span>
+          </div>
+          <div className="bg-white dark:bg-bg-dark-secondary border border-gray-200 dark:border-bg-dark-tertiary rounded-xl px-6 py-4 flex items-center gap-3 shadow-md hover:shadow-lg transition-shadow duration-300">
+            <Shield className="text-accent-green" size={20} />
+            <div>
+              <span className="text-accent-green font-bold">100% Data Privacy</span>
+              <span className="text-text-tertiary ml-2">&quot;Your data is never shared&quot;</span>
+            </div>
           </div>
         </div>
       </div>

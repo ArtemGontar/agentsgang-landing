@@ -133,7 +133,7 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
             </form>
 
             <p className="text-xs text-text-tertiary text-center mt-4">
-              We'll never spam you. Unsubscribe at any time.
+              We&#39;ll never spam you. Unsubscribe at any time.
             </p>
           </>
         ) : (
@@ -143,10 +143,10 @@ export default function WaitlistModal({ open, onClose }: WaitlistModalProps) {
               <CheckCircle className="text-white" size={32} />
             </div>
             <h2 className="text-2xl font-bold text-text-primary dark:text-white mb-2">
-              You're on the list!
+              You&#39;re on the list!
             </h2>
             <p className="text-text-secondary dark:text-text-tertiary mb-6">
-              Thanks for joining our waitlist. We'll send you updates on AgentsGang's progress and notify you as soon as we launch.
+              Thanks for joining our waitlist. We&#39;ll send you updates on AgentsGang&#39;s progress and notify you as soon as we launch.
             </p>
             <button
               onClick={handleClose}

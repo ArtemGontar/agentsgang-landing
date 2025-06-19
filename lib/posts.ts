@@ -12,6 +12,9 @@ export interface PostMetaData {
   cover_image: string
   author: string
   author_title: string
+  keywords?: string
+  readingTime?: string
+  tableOfContents?: boolean
 }
 
 export interface PostListData extends PostMetaData {
@@ -54,7 +57,12 @@ export function getSortedPostsData(): PostListData[] {
 }
 
 export async function getPostData(id: string): Promise<PostData> {
-  const fullPath = path.join(postsDirectory, `${id}.mdx`)
+  // Try .mdx first, then .md
+  let fullPath = path.join(postsDirectory, `${id}.mdx`)
+  if (!fs.existsSync(fullPath)) {
+    fullPath = path.join(postsDirectory, `${id}.md`)
+  }
+  
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   // Use gray-matter to parse the post metadata section

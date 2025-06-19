@@ -30,7 +30,7 @@ export default function Header() {
       }`}
     >
       <nav className="container-custom">
-        <div className="flex items-center justify-between h-20 border-b border-bg-tertiary dark:border-bg-secondary">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image 
@@ -86,7 +86,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (          
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-bg-dark shadow-lg border-t border-bg-tertiary dark:border-bg-secondary">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-bg-dark shadow-lg">
             <div className="py-4 space-y-3">
               <Link 
                 href="#features" 

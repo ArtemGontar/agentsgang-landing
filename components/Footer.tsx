@@ -10,9 +10,9 @@ export default function Footer() {
   const [waitlistOpen, setWaitlistOpen] = useState(false)
 
   return (
-    <footer className="bg-bg-dark text-white dark:bg-bg-dark dark:text-white">
+    <footer className="border-t border-bg-tertiary dark:border-[#23272f] bg-bg-dark text-white dark:bg-bg-dark dark:text-white">
       <div className="container-custom">
-        <div className="py-16">
+        <div className="py-8">
           {/* Main Footer Content */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             {/* Product */}
@@ -149,7 +149,7 @@ export default function Footer() {
           </div>
 
           {/* Newsletter Signup */}
-          {/* <div className="border-t border-bg-tertiary dark:border-bg-secondary pt-8 mb-8">
+          {/* <div className="border-t border-bg-tertiary dark:border-[#23272f] pt-8 mb-8">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="mb-4 md:mb-0">
                 <h4 className="text-lg font-semibold">Stay Updated</h4>
@@ -171,7 +171,7 @@ export default function Footer() {
           </div> */}
 
           {/* Bottom Footer */}
-          <div className="border-t border-bg-tertiary dark:border-bg-secondary pt-8">
+          <div className="border-t border-bg-tertiary dark:border-[#23272f] pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="flex items-center space-x-4 mb-4 md:mb-0">
                 <Image

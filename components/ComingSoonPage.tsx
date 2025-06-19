@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowLeft, Clock, Mail } from 'lucide-react'
 import { fireGTMEvent } from './GoogleTagManagerScripts'
+import { useEffect } from 'react'
 
 interface ComingSoonPageProps {
   title: string
@@ -16,6 +17,15 @@ export default function ComingSoonPage({
   description, 
   comingSoonText = "We're working hard to bring you this feature. Stay tuned!"
 }: ComingSoonPageProps) {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && fireGTMEvent) {
+      fireGTMEvent('page_view', {
+        event_category: 'engagement',
+        event_label: title,
+        location: 'coming_soon',
+      });
+    }
+  }, [title]);
   return (
     <div className="min-h-screen bg-gradient-section dark:bg-bg-dark">
       {/* Simple Header */}
@@ -40,12 +50,6 @@ export default function ComingSoonPage({
           <div className="w-20 h-20 bg-gradient-hero rounded-2xl flex items-center justify-center mx-auto mb-8">
             <Clock className="text-white" size={40} />
           </div>
-          {/* Fire GTM event for page view */}
-          {typeof window !== 'undefined' && fireGTMEvent && fireGTMEvent('page_view', {
-            event_category: 'engagement',
-            event_label: title,
-            location: 'coming_soon',
-          })}
 
           {/* Title */}
           <h1 className="text-4xl md:text-5xl font-bold text-text-primary dark:text-white mb-4">

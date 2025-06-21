@@ -94,7 +94,7 @@ This document outlines the recent improvements made to the AgentsGang landing pa
 ```tsx
 {/* Contact Sales Prompt */}
 <div className="flex flex-col items-center mb-8">
-  <a href="mailto:hello@agentsgang.com" className="btn-primary mb-3 text-lg px-8 py-3">
+  <a href="mailto:hello@agentsgang.xyz" className="btn-primary mb-3 text-lg px-8 py-3">
     Contact Sales
   </a>
   <span className="text-text-secondary...">Have questions? Reach out to our team before browsing the FAQ.</span>

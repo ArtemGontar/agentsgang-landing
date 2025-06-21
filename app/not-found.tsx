@@ -52,10 +52,10 @@ export default function NotFound() {
           <p className="text-body-small text-text-tertiary dark:text-text-dark-tertiary">
             Need help? Contact us at{' '}
             <a 
-              href="mailto:hello@agentsgang.com"
+              href="mailto:hello@agentsgang.xyz"
               className="text-primary-blue hover:text-primary-blue-dark dark:text-secondary-purple dark:hover:text-secondary-purple-light transition-colors"
             >
-              hello@agentsgang.com
+              hello@agentsgang.xyz
             </a>
           </p>
         </div>

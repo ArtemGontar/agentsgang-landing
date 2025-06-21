@@ -64,7 +64,7 @@ export default function ComingSoonPage({
             </Link>
             
             <a
-              href="mailto:hello@agentsgang.com"
+              href="mailto:hello@agentsgang.xyz"
               className="btn-secondary inline-flex items-center justify-center w-full sm:w-auto"
             >
               <Mail size={20} className="mr-2" />

@@ -12,7 +12,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://agentsgang.com'),
+  metadataBase: new URL('https://agentsgang.xyz'),
   title: 'AgentsGang - Build Your AI-Powered Company in Minutes',
   description: 'Create specialized AI agents that work together as your virtual team — handling marketing, development, analysis, and more while you focus on strategy.',
   icons: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AgentsGang - Build Your AI-Powered Company in Minutes',
     description: 'Create specialized AI agents that work together as your virtual team — handling marketing, development, analysis, and more while you focus on strategy.',
-    url: 'https://agentsgang.com',
+    url: 'https://agentsgang.xyz',
     siteName: 'AgentsGang',
     images: [
       {
@@ -91,8 +91,8 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Organization',
               'name': 'AgentsGang',
-              'url': 'https://agentsgang.com',
-              'logo': 'https://agentsgang.com/logo.png',
+              'url': 'https://agentsgang.xyz',
+              'logo': 'https://agentsgang.xyz/logo.png',
               'sameAs': [
                 'https://twitter.com/agentsgang',
                 'https://www.linkedin.com/company/agentsgang',
@@ -109,10 +109,10 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
               'name': 'AgentsGang',
-              'url': 'https://agentsgang.com',
+              'url': 'https://agentsgang.xyz',
               'potentialAction': {
                 '@type': 'SearchAction',
-                'target': 'https://agentsgang.com/search?q={search_term_string}',
+                'target': 'https://agentsgang.xyz/search?q={search_term_string}',
                 'query-input': 'required name=search_term_string'
               }
             })

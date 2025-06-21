@@ -168,7 +168,7 @@ The public-facing landing page serves as the primary conversion funnel for Agent
 
 **Social & Contact**
 - Twitter, LinkedIn icons
-- hello@agentsgang.com
+- hello@agentsgang.xyz
 - Newsletter signup: "Get AI company building tips"
 
 ## Visual Hierarchy

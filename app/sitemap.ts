@@ -20,8 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticUrls = staticPages.map(page => ({
     url: `${baseUrl}${page}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as 'monthly',
+    lastModified: new Date().toISOString(),
+    changeFrequency: 'monthly',
     priority: page === '' ? 1.0 : 0.8,
   }));
 

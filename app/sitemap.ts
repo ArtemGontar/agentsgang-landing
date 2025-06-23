@@ -16,12 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tutorials'
   ];
 
-  const baseUrl = 'https://agentsgang.xyz';
-
+  const baseUrl = 'https://agentsgang.xyz';  
+  
   const staticUrls = staticPages.map(page => ({
     url: `${baseUrl}${page}`,
     lastModified: new Date().toISOString(),
-    changefreq: 'monthly',
+    changeFrequency: 'monthly' as const,
     priority: page === '' ? 1.0 : 0.8,
   }));
 

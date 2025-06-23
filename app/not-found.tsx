@@ -20,7 +20,9 @@ export default function NotFound() {
         {/* Error Code */}
         <h1 className="text-6xl md:text-7xl font-bold text-gradient mb-4">
           404
-        </h1>        {/* Title */}
+        </h1>        
+        
+        {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-text-dark-primary mb-4">
           Page Not Found
         </h2>
@@ -47,7 +49,8 @@ export default function NotFound() {
             <Search size={20} className="mr-2" />
             Explore Features
           </Link>
-        </div>        {/* Help Text */}
+        </div>
+        {/* Help Text */}
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-bg-dark-secondary">
           <p className="text-body-small text-text-tertiary dark:text-text-dark-tertiary">
             Need help? Contact us at{' '}
